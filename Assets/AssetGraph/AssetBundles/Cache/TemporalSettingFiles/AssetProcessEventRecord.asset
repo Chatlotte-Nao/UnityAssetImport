@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d9a5f17c54584a67b7fe58665965f15, type: 3}
+  m_Name: AssetProcessEventRecord
+  m_EditorClassIdentifier: 
+  m_events:
+  - m_kind: 1
+    m_timestampUtc: 133866642183390222
+    m_assetName: 
+    m_assetGuid: 
+    m_graphGuid: e6d14d5c16e53944d97099099bbd53db
+    m_nodeId: 761d7d66-7a28-49ff-b427-f6bb6ceceb3f
+    m_nodeName: Load From Directory
+    m_description: 'Directory not found: C:/UniProject/AssetImportProject/Assets/TestResources/pic'
+    m_howToFix: Select a valid directory.
+  - m_kind: 1
+    m_timestampUtc: 133866642594395491
+    m_assetName: 
+    m_assetGuid: 
+    m_graphGuid: e6d14d5c16e53944d97099099bbd53db
+    m_nodeId: 761d7d66-7a28-49ff-b427-f6bb6ceceb3f
+    m_nodeName: Load From Directory
+    m_description: 'Directory not found: C:/UniProject/AssetImportProject/Assets/TestResources/pic'
+    m_howToFix: Select a valid directory.
+  - m_kind: 1
+    m_timestampUtc: 133866643381387049
+    m_assetName: 
+    m_assetGuid: 
+    m_graphGuid: e6d14d5c16e53944d97099099bbd53db
+    m_nodeId: 761d7d66-7a28-49ff-b427-f6bb6ceceb3f
+    m_nodeName: Load From Directory
+    m_description: 'Directory not found: C:/UniProject/AssetImportProject/Assets/TestResources/sprite'
+    m_howToFix: Select a valid directory.
+  m_errorEventCount: 3
+  m_infoEventCount: 0
+  m_version: 1
+  m_processStartIndex: 0
