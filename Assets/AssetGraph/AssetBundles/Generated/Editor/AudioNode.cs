@@ -91,14 +91,14 @@ public class AudioNode : Node {
 		IEnumerable<PerformGraph.AssetGroups> incoming, IEnumerable<Model.ConnectionData> connectionsToOutput,
 		PerformGraph.Output Output)
 	{
-		if (Output != null)
+		if (Output != null && connectionsToOutput != null && connectionsToOutput.Any())
 		{
-			var destination = (connectionsToOutput == null || !connectionsToOutput.Any())
-				? null
-				: connectionsToOutput.First();
-
-			var outputGroups = new Dictionary<string, List<AssetReference>>();
-
+			// 有下游节点时，进行输出
+			var destination = connectionsToOutput.First();
+			Output(destination, new Dictionary<string, List<AssetReference>>());
+		}
+		else
+		{
 			if (incoming != null)
 			{
 				foreach (var ag in incoming)
@@ -117,10 +117,10 @@ public class AudioNode : Node {
 								// {
 								// 	audioImporter.forceToMono = true;
 								// }
-								audioImporter.forceToMono = false;
+								audioImporter.forceToMono = true;
 
 								// 启用后台加载和预加载音频数据
-								audioImporter.loadInBackground = false;
+								audioImporter.loadInBackground = true;
 								// //audioImporter.preloadAudioData = true;
 								//
 								// // 根据音效类型选择压缩格式
@@ -171,9 +171,11 @@ public class AudioNode : Node {
 					}
 				}
 			}
-
-			Output(destination, outputGroups);
+			// 没有下游节点时，什么都不做，避免报错
+			Debug.Log("没有下游节点，跳过输出");
 		}
+		
+		
 	}
 
 
