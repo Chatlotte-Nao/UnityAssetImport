@@ -17,6 +17,8 @@ public class AudioNode : Node {
 
 	[SerializeField] private SerializableMultiTargetString m_myValue;
 
+	
+	
 	public override string ActiveStyle {
 		get {
 			return "node 8 on";
@@ -138,10 +140,12 @@ public class AudioNode : Node {
 							Debug.Log($"跳过已修改的文件: {path}");
 							continue;
 						}
+						
 						if (audioImporter != null)
 						{
-							//如果是双声道且左右声道内容相同，则将其合并为单声道
-							if (IsStereoWithSameContent(audioImporter))
+							AudioClip audioClip = AssetDatabase.LoadAssetAtPath<AudioClip>(audioImporter.assetPath);
+							//如果是双声道且左右声道内容相同，则将其设置为单声道
+							if (IsStereoWithSameContent(audioClip))
 							{
 								audioImporter.forceToMono = true;
 							}
@@ -149,32 +153,31 @@ public class AudioNode : Node {
 							{
 								audioImporter.forceToMono = false;
 							}
-
-							// 启用后台加载和预加载音频数据
+							
 							audioImporter.loadInBackground = true;
 							AudioImporterSampleSettings settings = audioImporter.defaultSampleSettings;
-							settings.preloadAudioData = true; // 开启 Preload Audio Data
+							settings.preloadAudioData = true;
 							//根据音效类型选择压缩格式
-							if (IsShortEffect(audioImporter))
+							if (IsShortEffect(audioClip))
 							{
-								// 短音效使用PCM压缩格式
+								//短音效使用PCM压缩格式
 								settings.compressionFormat=AudioCompressionFormat.PCM;
 							}
-							else if (IsLongEffectOrMusic(audioImporter))
+							else if (IsLongEffectOrMusic(audioClip))
 							{
-								// 长音效或背景音乐使用Vorbis压缩格式
+								//长音效或背景音乐使用Vorbis压缩格式
 								settings.compressionFormat=AudioCompressionFormat.Vorbis;
 								settings.quality = 0.9f;
 							}
 							// 根据音频使用频率设置加载模式
-							if (IsHighFrequencySound(audioImporter))
+							if (IsHighFrequencySound(audioClip))
 							{
-								// 高频音效（例如UI音效、按钮点击音效）使用Decompress On Load
+								//高频音效（例如UI音效、按钮点击音效）使用Decompress On Load
 								settings.loadType=AudioClipLoadType.DecompressOnLoad;
 							}
-							else if (IsLowFrequencySound(audioImporter))
+							else if (IsLowFrequencySound(audioClip))
 							{
-								// 低频音效（例如环境音效）使用Compressed In Memory
+								//低频音效（例如环境音效）使用Compressed In Memory
 								settings.loadType=AudioClipLoadType.CompressedInMemory;
 							}
 							else
@@ -183,7 +186,6 @@ public class AudioNode : Node {
 								settings.loadType=AudioClipLoadType.Streaming;
 							}
 							//如果是移动平台，且音频采样率超过22050Hz，则重写为22050Hz
-							AudioClip audioClip = AssetDatabase.LoadAssetAtPath<AudioClip>(audioImporter.assetPath);
 							if (IsMobilePlatform() && audioClip.frequency > 22050)
 							{
 								settings.sampleRateSetting=AudioSampleRateSetting.OverrideSampleRate;
@@ -203,11 +205,10 @@ public class AudioNode : Node {
 	/// <summary>
 	/// 检查是否为双声道且左右声道内容相同
 	/// </summary>
-	/// <param name="audioImporter"></param>
+	/// <param name="audioClip"></param>
 	/// <returns></returns>
-	private bool IsStereoWithSameContent(AudioImporter audioImporter)
+	private bool IsStereoWithSameContent(AudioClip audioClip)
 	{
-		AudioClip audioClip = AssetDatabase.LoadAssetAtPath<AudioClip>(audioImporter.assetPath);
 		if (audioClip.channels == 2)
 		{
 			// 获取左右声道的数据
@@ -231,41 +232,37 @@ public class AudioNode : Node {
 	/// <summary>
 	/// 判断是否为短音效（例如：长度小于10秒的音效）
 	/// </summary>
-	/// <param name="audioImporter"></param>
+	/// <param name="audioClip"></param>
 	/// <returns></returns>
-	private bool IsShortEffect(AudioImporter audioImporter)
+	private bool IsShortEffect(AudioClip audioClip)
 	{
-		AudioClip audioClip = AssetDatabase.LoadAssetAtPath<AudioClip>(audioImporter.assetPath);
 		return audioClip.length < 10.0f; // 如果音频长度小于10秒，认为是短音效
 	}
 	/// <summary>
 	/// 判断是否为长音效或音乐（例如：长度大于等于10秒的音效或音乐）
 	/// </summary>
-	/// <param name="audioImporter"></param>
+	/// <param name="audioClip"></param>
 	/// <returns></returns>
-	private bool IsLongEffectOrMusic(AudioImporter audioImporter)
+	private bool IsLongEffectOrMusic(AudioClip audioClip)
 	{
-		AudioClip audioClip = AssetDatabase.LoadAssetAtPath<AudioClip>(audioImporter.assetPath);
 		return audioClip.length >= 10.0f; // 如果音频长度大于等于10秒，认为是长音效或音乐
 	}
 	/// <summary>
 	/// 判断是否为高频音效（例如：UI音效、按钮点击音效等）
 	/// </summary>
-	/// <param name="audioImporter"></param>
+	/// <param name="audioClip"></param>
 	/// <returns></returns>
-	private bool IsHighFrequencySound(AudioImporter audioImporter)
+	private bool IsHighFrequencySound(AudioClip audioClip)
 	{
-		AudioClip audioClip = AssetDatabase.LoadAssetAtPath<AudioClip>(audioImporter.assetPath);
 		return audioClip.length < 2.0f; // 如果音频很短（小于2秒），认为是高频音效
 	}
 	/// <summary>
 	/// 判断是否为低频音效（例如：环境音效、背景音乐等）
 	/// </summary>
-	/// <param name="audioImporter"></param>
+	/// <param name="audioClip"></param>
 	/// <returns></returns>
-	private bool IsLowFrequencySound(AudioImporter audioImporter)
+	private bool IsLowFrequencySound(AudioClip audioClip)
 	{
-		AudioClip audioClip = AssetDatabase.LoadAssetAtPath<AudioClip>(audioImporter.assetPath);
 		return audioClip.length >= 10.0f; // 如果音频较长（大于等于10秒），认为是低频音效
 	}
 	/// <summary>

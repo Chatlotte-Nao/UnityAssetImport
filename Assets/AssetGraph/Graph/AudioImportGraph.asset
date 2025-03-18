@@ -20,7 +20,7 @@ MonoBehaviour:
     m_nodeInstance:
       m_className: UnityEngine.AssetGraph.Loader, Unity.AssetGraph.Editor, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiJUZXN0UmVzb3VyY2VzL2F1ZGlvIn1dfSwibV9sb2FkUGF0aEd1aWQiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IjdmNjlmNzM0NGFkZGI2YzRmOTMxMjA2MmRhOGVkM2VmIn1dfSwibV9pZ25vcmVQYXR0ZXJucyI6W3sibV9maWxlVHlwZU1hc2siOjEsIm1faWdub3JlUGF0dGVybiI6IiJ9XSwibV9yZXNwb25kVG9Bc3NldENoYW5nZSI6dHJ1ZX0=
+      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiJUZXN0UmVzb3VyY2VzL2F1ZGlvIn1dfSwibV9sb2FkUGF0aEd1aWQiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IjdmNjlmNzM0NGFkZGI2YzRmOTMxMjA2MmRhOGVkM2VmIn1dfSwibV9pZ25vcmVQYXR0ZXJucyI6W3sibV9maWxlVHlwZU1hc2siOjEsIm1faWdub3JlUGF0dGVybiI6Ii5tcDMifV0sIm1fcmVzcG9uZFRvQXNzZXRDaGFuZ2UiOnRydWV9
     m_inputPoints: []
     m_outputPoints:
     - id: b7b76184-e652-4e1a-b954-cedd12c41258
@@ -65,7 +65,7 @@ MonoBehaviour:
         height: 23
   - m_name: ClearAudioModifiedLabelNode
     m_id: c9100338-8ce7-4ba2-a95d-21bfc71b8b33
-    m_x: 552
+    m_x: 588
     m_y: 168
     m_nodeInstance:
       m_className: ClearAudioModifiedLabelNode, Assembly-CSharp-Editor, Version=0.0.0.0,
@@ -95,7 +95,7 @@ MonoBehaviour:
         height: 23
   - m_name: AudioNode
     m_id: e400cbe3-0f1c-40e7-9975-4aa1ca610be3
-    m_x: 828
+    m_x: 864
     m_y: 168
     m_nodeInstance:
       m_className: AudioNode, Assembly-CSharp-Editor, Version=0.0.0.0, Culture=neutral,
@@ -142,7 +142,7 @@ MonoBehaviour:
     m_toNodeId: e400cbe3-0f1c-40e7-9975-4aa1ca610be3
     m_toNodeConnectionPoiontId: 59bda0e8-559b-41b4-8e24-09e71df5ca9d
     m_label: +
-  m_lastModified: 133867364284536694
+  m_lastModified: 133867472039965177
   m_version: 2
   m_graphDescription: 
   m_useAsAssetPostprocessor: 0
