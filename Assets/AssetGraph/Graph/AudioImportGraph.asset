@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eec4882d68a9346b3b5f8ecf1e38a534, type: 3}
+  m_Name: AudioImportGraph
+  m_EditorClassIdentifier: 
+  m_allNodes:
+  - m_name: Load From Directory
+    m_id: 3e858166-2cfb-4c0b-8883-e3d1c870bd34
+    m_x: 120
+    m_y: 168
+    m_nodeInstance:
+      m_className: UnityEngine.AssetGraph.Loader, Unity.AssetGraph.Editor, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiJUZXN0UmVzb3VyY2VzL2F1ZGlvIn1dfSwibV9sb2FkUGF0aEd1aWQiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IjdmNjlmNzM0NGFkZGI2YzRmOTMxMjA2MmRhOGVkM2VmIn1dfSwibV9pZ25vcmVQYXR0ZXJucyI6W3sibV9maWxlVHlwZU1hc2siOjEsIm1faWdub3JlUGF0dGVybiI6IiJ9XSwibV9yZXNwb25kVG9Bc3NldENoYW5nZSI6dHJ1ZX0=
+    m_inputPoints: []
+    m_outputPoints:
+    - id: b7b76184-e652-4e1a-b954-cedd12c41258
+      label: +
+      parentId: 3e858166-2cfb-4c0b-8883-e3d1c870bd34
+      isInput: 0
+      buttonRect:
+        serializedVersion: 2
+        x: 158.94
+        y: 33.03
+        width: 10
+        height: 23
+  - m_name: Split By Filter
+    m_id: b9354c21-41b2-43ed-9b2d-8c8be924adad
+    m_x: 384
+    m_y: 168
+    m_nodeInstance:
+      m_className: UnityEngine.AssetGraph.Filter, Unity.AssetGraph.Editor, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_instanceData: B64|eyJtX2ZpbHRlciI6W3sibV9pbnN0YW5jZSI6eyJtX2NsYXNzTmFtZSI6IlVuaXR5RW5naW5lLkFzc2V0R3JhcGguRmlsdGVyQnlOYW1lQW5kVHlwZSwgVW5pdHkuQXNzZXRHcmFwaC5FZGl0b3IsIFZlcnNpb249MC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsIiwibV9pbnN0YW5jZURhdGEiOiJCNjR8ZXlKdFgyWnBiSFJsY2t0bGVYZHZjbVFpT2lJaUxDSnRYMlpwYkhSbGNrdGxlWFI1Y0dVaU9pSkJkV1JwYnlJc0ltMWZkbVZ5YzJsdmJpSTZNWDA9In0sIm1fcG9pbnRJZCI6IjBiNTZhOWI2LWU4NjUtNGIwZS1hNDhiLTAyNjdjNDZiNDgyOSJ9XX0=
+    m_inputPoints:
+    - id: e2ae4e46-434e-4770-a010-694b88b76c5e
+      label: '-'
+      parentId: b9354c21-41b2-43ed-9b2d-8c8be924adad
+      isInput: 1
+      buttonRect:
+        serializedVersion: 2
+        x: 0
+        y: 30.029999
+        width: 21
+        height: 29
+    m_outputPoints:
+    - id: 0b56a9b6-e865-4b0e-a48b-0267c46b4829
+      label: '[Audio]'
+      parentId: b9354c21-41b2-43ed-9b2d-8c8be924adad
+      isInput: 0
+      buttonRect:
+        serializedVersion: 2
+        x: 117.76
+        y: 33.03
+        width: 10
+        height: 23
+  - m_name: ClearAudioModifiedLabelNode
+    m_id: c9100338-8ce7-4ba2-a95d-21bfc71b8b33
+    m_x: 552
+    m_y: 168
+    m_nodeInstance:
+      m_className: ClearAudioModifiedLabelNode, Assembly-CSharp-Editor, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_instanceData: B64|eyJtX215VmFsdWUiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IiJ9XX19
+    m_inputPoints:
+    - id: b46626b0-8ae0-42f7-a01a-5bbbf73d0537
+      label: '-'
+      parentId: c9100338-8ce7-4ba2-a95d-21bfc71b8b33
+      isInput: 1
+      buttonRect:
+        serializedVersion: 2
+        x: 0
+        y: 30.029999
+        width: 21
+        height: 29
+    m_outputPoints:
+    - id: b84cb321-96a6-4305-b1a9-225b54db991a
+      label: +
+      parentId: c9100338-8ce7-4ba2-a95d-21bfc71b8b33
+      isInput: 0
+      buttonRect:
+        serializedVersion: 2
+        x: 216.03
+        y: 33.03
+        width: 10
+        height: 23
+  - m_name: AudioNode
+    m_id: e400cbe3-0f1c-40e7-9975-4aa1ca610be3
+    m_x: 828
+    m_y: 168
+    m_nodeInstance:
+      m_className: AudioNode, Assembly-CSharp-Editor, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      m_instanceData: B64|eyJtX215VmFsdWUiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IiJ9XX19
+    m_inputPoints:
+    - id: 59bda0e8-559b-41b4-8e24-09e71df5ca9d
+      label: '-'
+      parentId: e400cbe3-0f1c-40e7-9975-4aa1ca610be3
+      isInput: 1
+      buttonRect:
+        serializedVersion: 2
+        x: 0
+        y: 30.029999
+        width: 21
+        height: 29
+    m_outputPoints:
+    - id: 0bd1332e-d7b1-43e3-9234-82ae73b555b9
+      label: +
+      parentId: e400cbe3-0f1c-40e7-9975-4aa1ca610be3
+      isInput: 0
+      buttonRect:
+        serializedVersion: 2
+        x: 111
+        y: 33.03
+        width: 10
+        height: 23
+  m_allConnections:
+  - m_id: 5be9aa5e-e4e1-4d77-b573-32c3999e3178
+    m_fromNodeId: 3e858166-2cfb-4c0b-8883-e3d1c870bd34
+    m_fromNodeConnectionPointId: b7b76184-e652-4e1a-b954-cedd12c41258
+    m_toNodeId: b9354c21-41b2-43ed-9b2d-8c8be924adad
+    m_toNodeConnectionPoiontId: e2ae4e46-434e-4770-a010-694b88b76c5e
+    m_label: +
+  - m_id: 640d86fa-f30f-4067-814e-8e016d02a4d2
+    m_fromNodeId: b9354c21-41b2-43ed-9b2d-8c8be924adad
+    m_fromNodeConnectionPointId: 0b56a9b6-e865-4b0e-a48b-0267c46b4829
+    m_toNodeId: c9100338-8ce7-4ba2-a95d-21bfc71b8b33
+    m_toNodeConnectionPoiontId: b46626b0-8ae0-42f7-a01a-5bbbf73d0537
+    m_label: '[Audio]'
+  - m_id: 43965265-c14a-488c-ba07-80940d23f267
+    m_fromNodeId: c9100338-8ce7-4ba2-a95d-21bfc71b8b33
+    m_fromNodeConnectionPointId: b84cb321-96a6-4305-b1a9-225b54db991a
+    m_toNodeId: e400cbe3-0f1c-40e7-9975-4aa1ca610be3
+    m_toNodeConnectionPoiontId: 59bda0e8-559b-41b4-8e24-09e71df5ca9d
+    m_label: +
+  m_lastModified: 133867364284536694
+  m_version: 2
+  m_graphDescription: 
+  m_useAsAssetPostprocessor: 0
+  m_graphExecOrderPriority: 0
