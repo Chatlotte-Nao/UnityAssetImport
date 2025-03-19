@@ -12,8 +12,8 @@ using Model=UnityEngine.AssetGraph.DataModel.Version2;
 /// <summary>
 /// 音频文件设置节点
 /// </summary>
-[CustomNode("Custom/AudioNode", 1000)]
-public class AudioNode : Node {
+[CustomNode("Custom/AudioRuleNode", 1000)]
+public class AudioRuleNode : Node {
 
 	[SerializeField] private SerializableMultiTargetString m_myValue;
 
@@ -44,7 +44,7 @@ public class AudioNode : Node {
 	}
 
 	public override Node Clone(Model.NodeData newData) {
-		var newNode = new AudioNode();
+		var newNode = new AudioRuleNode();
 		newNode.m_myValue = new SerializableMultiTargetString(m_myValue);
 		newData.AddDefaultInputPoint();
 		newData.AddDefaultOutputPoint();

@@ -1,6 +1,9 @@
 using System;
-using System.Collections.Generic;
+using System.Linq;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.AssetGraph;
+using UnityEngine.AssetGraph.DataModel.Version2;
 
 public class AssetImportTool
 {
@@ -11,35 +14,41 @@ public class AssetImportTool
     {
         for (int i = 0; i < importAssetInfo.LoadPath.Length; i++)
         {
-            switch (importAssetInfo.EnumType[i])
+            SetLoadPath(importAssetInfo.EnumType[i],importAssetInfo.LoadPath[i]);
+        }
+        AssetGraphUtility.ExecuteGraph(EditorUserBuildSettings.activeBuildTarget, ImportAssetConfig.TEXTURE_GRAPH_PATH);
+    }
+    /// <summary>
+    /// 设置加载路径
+    /// </summary>
+    private static void SetLoadPath(Enum enumType,string loadPath)
+    {
+        string graphPath = string.Empty;
+        if (enumType.GetType() == typeof(TextureType))
+        {
+            graphPath = ImportAssetConfig.TEXTURE_GRAPH_PATH;
+        }
+        else if (enumType.GetType() == typeof(AudioType))
+        {
+            graphPath = ImportAssetConfig.AUDIO_GRAPH_PATH;
+        }
+
+        var graph = AssetDatabase.LoadAssetAtPath<ConfigGraph>(graphPath);
+        if (graph == null)
+        {
+            Debug.LogError("未找到 AssetGraph 文件: " + graphPath);
+            return;
+        }
+
+        foreach (var node in graph.Nodes)
+        {
+            if (string.Equals("Load"+enumType,node.Name))
             {
-                case TextureType.Default:
-                
-                    break;
-            
-                case TextureType.NormalMap:
-                
-                    break;
-            
-                case TextureType.Sprite:
-                
-                    break;
-            
-                case AudioType.HighFrequencyClip:
-                
-                    break;
-            
-                case AudioType.LowFrequencyClip:
-                
-                    break;
-            
-                case AudioType.LargeFileClip:
-                
-                    break;
-            
-                default:
-                    Debug.LogError("未知的枚举类型 ");
-                    break;
+                var loader = node.Operation.Object as UnityEngine.AssetGraph.Loader;
+                loader.LoadPath = loadPath;
+                EditorUtility.SetDirty(graph);
+                AssetDatabase.SaveAssets();
+                AssetDatabase.Refresh();
             }
         }
     }

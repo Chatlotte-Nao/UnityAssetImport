@@ -5,7 +5,9 @@ public enum TextureType
 {
     Default,//默认格式
     NormalMap,//法线贴图
-    Sprite//精灵UI图片
+    Sprite,//精灵UI图片
+    SingleChannel,//单通道图片
+    Translucent //半透明图片
 }
 
 public enum AudioType
@@ -29,6 +31,14 @@ public class ImportAssetInfo
         EnumType = enumType;
     }
 }
+
+public class ImportAssetConfig
+{
+    public const string TEXTURE_GRAPH_PATH = "Assets/AssetGraph/Graph/TextureImportGraph.asset";
+    public const string AUDIO_GRAPH_PATH = "Assets/AssetGraph/Graph/AudioImportGraph.asset";
+}
+
+
 
 
 
