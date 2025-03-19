@@ -39,11 +39,30 @@ public class ResourceConfigPreferences : SettingsProvider
     private static string[] typeOptions;// = Enum.GetNames(typeof(ResourceType));
     private static List<string[]> typeSubOptions = new List<string[]>();
 
-
+    private double timePassed = 0f;  
+    private bool waitingForDelay = false;
     public ResourceConfigPreferences(string path, SettingsScope scope) : base(path, scope)
     {
         LoadSettings();
       
+    }
+
+    private void Update()
+    {
+        if (waitingForDelay)
+        {
+
+            if (EditorApplication.timeSinceStartup - timePassed >= 2f) 
+            {
+                waitingForDelay = false; 
+
+                ResourceEntryOperationMode1.Excute();
+
+                AssetDatabase.Refresh();
+
+                Debug.Log("所有文件更新成功");
+            }
+        }
     }
 
     public override void OnGUI(string searchContext)
@@ -60,14 +79,25 @@ public class ResourceConfigPreferences : SettingsProvider
 
         if (GUILayout.Button("执行"))
         {
-            foreach (var entry in resourceEntries) 
-            {
-                //从美术目录拷贝到资源目录
-                ResourceEntryOperationMode1.Copy(entry, true);
-            }
 
-            AssetDatabase.Refresh();
-            Debug.Log("所有文件更新成功");
+            if (!waitingForDelay)
+            {
+
+                timePassed = EditorApplication.timeSinceStartup;
+
+                foreach (var entry in resourceEntries)
+                {
+                    //从美术目录拷贝到资源目录
+                    ResourceEntryOperationMode1.Copy(entry, true);
+                }
+
+                AssetDatabase.Refresh();
+                waitingForDelay = true;
+
+            }
+           
+
+          
         }
 
         EditorGUILayout.Space();
@@ -191,6 +221,7 @@ public class ResourceConfigPreferences : SettingsProvider
             }
         }
 
+        EditorApplication.update += Update;
 
         typeSubOptions.Clear();
         var enumTypes = GetEnumTypes(typeof(AssetEnum));
@@ -344,14 +375,14 @@ public class ResourceEntryOperationMode1
 
 
 
-    private static void Excute()
+    public static void Excute()
     {
         string[] loadPaths = new string[OperationResourceEntrys.Count];
         Enum[] enumTypes = new Enum[OperationResourceEntrys.Count];
         int index = 0;
         foreach (var e in OperationResourceEntrys) 
         {
-            loadPaths[index] = e.Value.AssetsDirectory  + "/" + Path.GetFileName(e.Key);
+            loadPaths[index] = "Assets/" + e.Value.AssetsDirectory;
             enumTypes[index] = ResourceConfigPreferences.GetValueByIndex(e.Value.TypeIndex, e.Value.SubTypeIndex);
             Debug.Log(loadPaths[index]);
             Debug.Log(enumTypes[index]);
