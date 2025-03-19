@@ -351,7 +351,7 @@ public class ResourceEntryOperationMode1
         int index = 0;
         foreach (var e in OperationResourceEntrys) 
         {
-            loadPaths[index] = e.Key;
+            loadPaths[index] = e.Value.AssetsDirectory  + "/" + Path.GetFileName(e.Key);
             enumTypes[index] = ResourceConfigPreferences.GetValueByIndex(e.Value.TypeIndex, e.Value.SubTypeIndex);
             Debug.Log(loadPaths[index]);
             Debug.Log(enumTypes[index]);
