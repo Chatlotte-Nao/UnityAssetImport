@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Reflection;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEditor.VersionControl;
@@ -56,14 +57,17 @@ public class ResourceConfigPreferences : SettingsProvider
             {
                 waitingForDelay = false; 
 
-                ResourceEntryOperationMode1.Excute();
+                Excute();
 
                 AssetDatabase.Refresh();
 
-                Debug.Log("所有文件更新成功");
+                Debug.Log("所有文件更新成功------------------>");
             }
         }
     }
+
+
+
 
     public override void OnGUI(string searchContext)
     {
@@ -157,6 +161,23 @@ public class ResourceConfigPreferences : SettingsProvider
     public static SettingsProvider CreateCustomPreferences()
     {
         return new ResourceConfigPreferences("Preferences/CustomAssetConfiguration", SettingsScope.User);
+    }
+
+    private void Excute()
+    {
+        string[] loadPaths = new string[this.resourceEntries.Count];
+        Enum[] enumTypes = new Enum[this.resourceEntries.Count];
+        int index = 0;
+        foreach (var entry in this.resourceEntries)
+        {
+            loadPaths[index] = "Assets/" + entry.AssetsDirectory;
+            enumTypes[index] = ResourceConfigPreferences.GetValueByIndex(entry.TypeIndex, entry.SubTypeIndex);
+            Debug.Log(loadPaths[index]);
+            Debug.Log(enumTypes[index]);
+        }
+
+        ImportAssetInfo info = new ImportAssetInfo(loadPaths, enumTypes);
+        AssetImportTool.ImportAssetsAndSetUp(info);
     }
 
     private void DeleteSettings()
@@ -344,7 +365,7 @@ public class ResourceEntryOperationMode1
              
             }
         }
-        Excute();
+        
     }
 
 
@@ -372,27 +393,6 @@ public class ResourceEntryOperationMode1
             Console.WriteLine($"Error: {ex.Message}");
         }
     }
-
-
-
-    public static void Excute()
-    {
-        string[] loadPaths = new string[OperationResourceEntrys.Count];
-        Enum[] enumTypes = new Enum[OperationResourceEntrys.Count];
-        int index = 0;
-        foreach (var e in OperationResourceEntrys) 
-        {
-            loadPaths[index] = "Assets/" + e.Value.AssetsDirectory;
-            enumTypes[index] = ResourceConfigPreferences.GetValueByIndex(e.Value.TypeIndex, e.Value.SubTypeIndex);
-            Debug.Log(loadPaths[index]);
-            Debug.Log(enumTypes[index]);
-            index++;
-        }
-
-        ImportAssetInfo info = new ImportAssetInfo(loadPaths, enumTypes);
-        AssetImportTool.ImportAssetsAndSetUp(info);
-    }
-
 
  
 
