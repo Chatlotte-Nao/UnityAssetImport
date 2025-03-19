@@ -1,20 +1,23 @@
 using System;
 using System.Collections.Generic;
 
-public enum TextureType
+public class AssetEnum
 {
-    Default,//默认格式
-    NormalMap,//法线贴图
-    Sprite,//精灵UI图片
-    SingleChannel,//单通道图片
-    Translucent //半透明图片
-}
-
-public enum AudioType
-{
-    HighFrequencyClip,  //高频率使用，文件小，比如用作按钮点击音效等
-    LowFrequencyClip,   //低频率使用，文件大小中等，比如角色的对话语音
-    LargeFileClip      //文件大播放时间长，用作背景音乐
+    public enum TextureType
+    {
+        Default,//默认格式
+        NormalMap,//法线贴图
+        Sprite,//精灵UI图片
+        SingleChannel,//单通道图片
+        Translucent //半透明图片
+    }
+    
+    public enum AudioType
+    {
+        HighFrequencyClip,  //高频率使用，文件小，比如用作按钮点击音效等
+        LowFrequencyClip,   //低频率使用，文件大小中等，比如角色的对话语音
+        LargeFileClip      //文件大播放时间长，用作背景音乐
+    }
 }
 
 /// <summary>

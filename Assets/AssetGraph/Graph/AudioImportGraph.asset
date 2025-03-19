@@ -20,7 +20,7 @@ MonoBehaviour:
     m_nodeInstance:
       m_className: UnityEngine.AssetGraph.Loader, Unity.AssetGraph.Editor, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifV19LCJtX2xvYWRQYXRoR3VpZCI6eyJtX3ZhbHVlcyI6W3sidGFyZ2V0R3JvdXAiOjAsInZhbHVlIjoiMDAwMDAwMDAwMDAwMDAwMDEwMDAwMDAwMDAwMDAwMDAifV19LCJtX2lnbm9yZVBhdHRlcm5zIjpbXSwibV9yZXNwb25kVG9Bc3NldENoYW5nZSI6ZmFsc2V9
+      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IkF1ZGlvL0hpZ2hGcmVxdWVuY3lDbGlwIn1dfSwibV9sb2FkUGF0aEd1aWQiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IjAwMDAwMDAwMDAwMDAwMDAxMDAwMDAwMDAwMDAwMDAwIn0seyJ0YXJnZXRHcm91cCI6MSwidmFsdWUiOiI4M2JhYjFkODY1OGFkMjA0NWE2YjZkMTQ0ZjAyNzc5MSJ9XX0sIm1faWdub3JlUGF0dGVybnMiOltdLCJtX3Jlc3BvbmRUb0Fzc2V0Q2hhbmdlIjpmYWxzZX0=
     m_inputPoints: []
     m_outputPoints:
     - id: 1c58a3d0-f12e-4bcd-809e-278cb91c4976
@@ -40,7 +40,7 @@ MonoBehaviour:
     m_nodeInstance:
       m_className: UnityEngine.AssetGraph.Loader, Unity.AssetGraph.Editor, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifV19LCJtX2xvYWRQYXRoR3VpZCI6eyJtX3ZhbHVlcyI6W3sidGFyZ2V0R3JvdXAiOjAsInZhbHVlIjoiMDAwMDAwMDAwMDAwMDAwMDEwMDAwMDAwMDAwMDAwMDAifV19LCJtX2lnbm9yZVBhdHRlcm5zIjpbXSwibV9yZXNwb25kVG9Bc3NldENoYW5nZSI6ZmFsc2V9
+      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IkF1ZGlvL0xhcmdlRmlsZUNsaXAifV19LCJtX2xvYWRQYXRoR3VpZCI6eyJtX3ZhbHVlcyI6W3sidGFyZ2V0R3JvdXAiOjAsInZhbHVlIjoiMDAwMDAwMDAwMDAwMDAwMDEwMDAwMDAwMDAwMDAwMDAifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IjU3ZjFkMTRmY2ExOTYyMTQ5ODlmMWQ4OTZkYmNiZDFiIn1dfSwibV9pZ25vcmVQYXR0ZXJucyI6W10sIm1fcmVzcG9uZFRvQXNzZXRDaGFuZ2UiOmZhbHNlfQ==
     m_inputPoints: []
     m_outputPoints:
     - id: f451db32-e976-4c08-862b-a9ab85d86ab8
@@ -60,7 +60,7 @@ MonoBehaviour:
     m_nodeInstance:
       m_className: UnityEngine.AssetGraph.Loader, Unity.AssetGraph.Editor, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifV19LCJtX2xvYWRQYXRoR3VpZCI6eyJtX3ZhbHVlcyI6W3sidGFyZ2V0R3JvdXAiOjAsInZhbHVlIjoiMDAwMDAwMDAwMDAwMDAwMDEwMDAwMDAwMDAwMDAwMDAifV19LCJtX2lnbm9yZVBhdHRlcm5zIjpbXSwibV9yZXNwb25kVG9Bc3NldENoYW5nZSI6ZmFsc2V9
+      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IkF1ZGlvL0xvd0ZyZXF1ZW5jeUNsaXAifV19LCJtX2xvYWRQYXRoR3VpZCI6eyJtX3ZhbHVlcyI6W3sidGFyZ2V0R3JvdXAiOjAsInZhbHVlIjoiMDAwMDAwMDAwMDAwMDAwMDEwMDAwMDAwMDAwMDAwMDAifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6ImY3YTViN2JiNjI2MjI2MDRmOWM5YWYxZGNjMzA2MzIyIn1dfSwibV9pZ25vcmVQYXR0ZXJucyI6W10sIm1fcmVzcG9uZFRvQXNzZXRDaGFuZ2UiOmZhbHNlfQ==
     m_inputPoints: []
     m_outputPoints:
     - id: 9a0ddaea-728d-458b-8e74-d8aa27068ac3
@@ -163,68 +163,18 @@ MonoBehaviour:
         y: 33.03
         width: 10
         height: 23
-  - m_name: LoadHighFrequencyClip
-    m_id: 4440a677-ae54-4c6f-a265-b046a4939c7f
-    m_x: 144
-    m_y: 588
-    m_nodeInstance:
-      m_className: UnityEngine.AssetGraph.Loader, Unity.AssetGraph.Editor, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiJhdWRpbzExIn1dfSwibV9sb2FkUGF0aEd1aWQiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IjczMWZjNjNiMThjZDg4NzQ3YTAwMTVjMTBhNjk4MzBjIn1dfSwibV9pZ25vcmVQYXR0ZXJucyI6W10sIm1fcmVzcG9uZFRvQXNzZXRDaGFuZ2UiOmZhbHNlfQ==
-    m_inputPoints: []
-    m_outputPoints:
-    - id: dd63e09e-67a8-4915-a370-ef711d8c1c88
-      label: +
-      parentId: 4440a677-ae54-4c6f-a265-b046a4939c7f
-      isInput: 0
-      buttonRect:
-        serializedVersion: 2
-        x: 178.9
-        y: 33.03
-        width: 10
-        height: 23
-  - m_name: Split By Filter
-    m_id: cf2765ac-19ad-4401-b974-616be7e5470e
-    m_x: 408
-    m_y: 588
-    m_nodeInstance:
-      m_className: UnityEngine.AssetGraph.Filter, Unity.AssetGraph.Editor, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      m_instanceData: B64|eyJtX2ZpbHRlciI6W3sibV9pbnN0YW5jZSI6eyJtX2NsYXNzTmFtZSI6IlVuaXR5RW5naW5lLkFzc2V0R3JhcGguRmlsdGVyQnlOYW1lQW5kVHlwZSwgVW5pdHkuQXNzZXRHcmFwaC5FZGl0b3IsIFZlcnNpb249MC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsIiwibV9pbnN0YW5jZURhdGEiOiJCNjR8ZXlKdFgyWnBiSFJsY2t0bGVYZHZjbVFpT2lJaUxDSnRYMlpwYkhSbGNrdGxlWFI1Y0dVaU9pSkJkV1JwYnlJc0ltMWZkbVZ5YzJsdmJpSTZNWDA9In0sIm1fcG9pbnRJZCI6IjI3MzM4MGJlLTFiZTQtNGI2MS1iNmFlLWUzNjc0YzA5OTY0ZCJ9XX0=
-    m_inputPoints:
-    - id: 3f1c9e69-2f58-4e23-8eda-254019dd9e69
-      label: '-'
-      parentId: cf2765ac-19ad-4401-b974-616be7e5470e
-      isInput: 1
-      buttonRect:
-        serializedVersion: 2
-        x: 0
-        y: 30.029999
-        width: 21
-        height: 29
-    m_outputPoints:
-    - id: 273380be-1be4-4b61-b6ae-e3674c09964d
-      label: '[Audio]'
-      parentId: cf2765ac-19ad-4401-b974-616be7e5470e
-      isInput: 0
-      buttonRect:
-        serializedVersion: 2
-        x: 117.76
-        y: 33.03
-        width: 10
-        height: 23
-  - m_name: Overwrite Import Settings
-    m_id: b0507e12-7838-4c01-8df6-03d8164e09d6
-    m_x: 588
-    m_y: 588
+  - m_name: HighFrequencyClipSetting
+    m_id: 15a22f8f-a6aa-4d04-a233-21bdc6efe563
+    m_x: 564
+    m_y: 192
     m_nodeInstance:
       m_className: UnityEngine.AssetGraph.ImportSetting, Unity.AssetGraph.Editor,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_instanceData: B64|eyJtX3Nwcml0ZVBhY2tpbmdUYWdOYW1lVGVtcGxhdGUiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IioifV19LCJtX292ZXJ3cml0ZVBhY2tpbmdUYWciOmZhbHNlLCJtX3VzZUN1c3RvbVNldHRpbmdBc3NldCI6ZmFsc2UsIm1fb3ZlcndyaXRlU3ByaXRlU2hlZXQiOmZhbHNlLCJtX2N1c3RvbVNldHRpbmdBc3NldEd1aWQiOiIiLCJtX3JlZmVyZW5jZUFzc2V0R3VpZCI6IjRmZjdhYzc2ODUzYzkyMTRhYTdhNTE2NTkyZjUyNWVlIiwibV9jb25maWd1cmF0b3JJbnN0YW5jZSI6eyJtX2NsYXNzTmFtZSI6IlVuaXR5RW5naW5lLkFzc2V0R3JhcGguQXVkaW9JbXBvcnRTZXR0aW5nc0NvbmZpZ3VyYXRvciwgVW5pdHkuQXNzZXRHcmFwaC5FZGl0b3IsIFZlcnNpb249MC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsIiwibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IkI2NHxlMzA9In1dfX0=
+      m_instanceData: B64|eyJtX3Nwcml0ZVBhY2tpbmdUYWdOYW1lVGVtcGxhdGUiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IioifV19LCJtX292ZXJ3cml0ZVBhY2tpbmdUYWciOmZhbHNlLCJtX3VzZUN1c3RvbVNldHRpbmdBc3NldCI6ZmFsc2UsIm1fb3ZlcndyaXRlU3ByaXRlU2hlZXQiOmZhbHNlLCJtX2N1c3RvbVNldHRpbmdBc3NldEd1aWQiOiIiLCJtX3JlZmVyZW5jZUFzc2V0R3VpZCI6IjFlNzk5ODBjMmRmYjljZTQwYmIyYzFmNjM0ZTI1Y2E5IiwibV9jb25maWd1cmF0b3JJbnN0YW5jZSI6eyJtX2NsYXNzTmFtZSI6IlVuaXR5RW5naW5lLkFzc2V0R3JhcGguQXVkaW9JbXBvcnRTZXR0aW5nc0NvbmZpZ3VyYXRvciwgVW5pdHkuQXNzZXRHcmFwaC5FZGl0b3IsIFZlcnNpb249MC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsIiwibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IkI2NHxlMzA9In1dfX0=
     m_inputPoints:
-    - id: f4dc78f3-b1f0-49ce-bb1e-c11015fc2e17
+    - id: 1ddfb142-055e-4f91-91bb-09d5d316801e
       label: '-'
-      parentId: b0507e12-7838-4c01-8df6-03d8164e09d6
+      parentId: 15a22f8f-a6aa-4d04-a233-21bdc6efe563
       isInput: 1
       buttonRect:
         serializedVersion: 2
@@ -233,28 +183,28 @@ MonoBehaviour:
         width: 21
         height: 29
     m_outputPoints:
-    - id: 4a7f34b4-da8a-4f26-89b2-5d17d35cc3ed
+    - id: b3db3d85-f136-4f7c-abf8-f970e53c25fc
       label: +
-      parentId: b0507e12-7838-4c01-8df6-03d8164e09d6
+      parentId: 15a22f8f-a6aa-4d04-a233-21bdc6efe563
       isInput: 0
       buttonRect:
         serializedVersion: 2
-        x: 189.38
+        x: 191.33
         y: 33.03
         width: 10
         height: 23
-  - m_name: Overwrite Import Settings
-    m_id: d5b63af6-fd51-47a6-b88e-212695cc6135
-    m_x: 852
-    m_y: 588
+  - m_name: LowFrequencyClipSetting
+    m_id: 6b35a967-a052-4659-adad-e18a9a69e8b3
+    m_x: 564
+    m_y: 300
     m_nodeInstance:
       m_className: UnityEngine.AssetGraph.ImportSetting, Unity.AssetGraph.Editor,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_instanceData: B64|eyJtX3Nwcml0ZVBhY2tpbmdUYWdOYW1lVGVtcGxhdGUiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IioifV19LCJtX292ZXJ3cml0ZVBhY2tpbmdUYWciOmZhbHNlLCJtX3VzZUN1c3RvbVNldHRpbmdBc3NldCI6ZmFsc2UsIm1fb3ZlcndyaXRlU3ByaXRlU2hlZXQiOmZhbHNlLCJtX2N1c3RvbVNldHRpbmdBc3NldEd1aWQiOiIiLCJtX3JlZmVyZW5jZUFzc2V0R3VpZCI6ImI1ZmQ2Mjc4YmU5MmE4YzRhOTZlNTRhYzIzNjI2NzJiIiwibV9jb25maWd1cmF0b3JJbnN0YW5jZSI6eyJtX2NsYXNzTmFtZSI6IlVuaXR5RW5naW5lLkFzc2V0R3JhcGguQXVkaW9JbXBvcnRTZXR0aW5nc0NvbmZpZ3VyYXRvciwgVW5pdHkuQXNzZXRHcmFwaC5FZGl0b3IsIFZlcnNpb249MC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsIiwibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IkI2NHxlMzA9In1dfX0=
+      m_instanceData: B64|eyJtX3Nwcml0ZVBhY2tpbmdUYWdOYW1lVGVtcGxhdGUiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IioifV19LCJtX292ZXJ3cml0ZVBhY2tpbmdUYWciOmZhbHNlLCJtX3VzZUN1c3RvbVNldHRpbmdBc3NldCI6ZmFsc2UsIm1fb3ZlcndyaXRlU3ByaXRlU2hlZXQiOmZhbHNlLCJtX2N1c3RvbVNldHRpbmdBc3NldEd1aWQiOiIiLCJtX3JlZmVyZW5jZUFzc2V0R3VpZCI6ImViMGZjOWI1NWUyMjUzNzRkODk2YjlkNWEzNDA0OGQyIiwibV9jb25maWd1cmF0b3JJbnN0YW5jZSI6eyJtX2NsYXNzTmFtZSI6IlVuaXR5RW5naW5lLkFzc2V0R3JhcGguQXVkaW9JbXBvcnRTZXR0aW5nc0NvbmZpZ3VyYXRvciwgVW5pdHkuQXNzZXRHcmFwaC5FZGl0b3IsIFZlcnNpb249MC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsIiwibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IkI2NHxlMzA9In1dfX0=
     m_inputPoints:
-    - id: b2b29087-5e6f-4d12-8301-4180d8d82748
+    - id: dfe316f7-50e8-49cf-9bb1-da0558a51207
       label: '-'
-      parentId: d5b63af6-fd51-47a6-b88e-212695cc6135
+      parentId: 6b35a967-a052-4659-adad-e18a9a69e8b3
       isInput: 1
       buttonRect:
         serializedVersion: 2
@@ -263,13 +213,133 @@ MonoBehaviour:
         width: 21
         height: 29
     m_outputPoints:
-    - id: 9e7f1878-6331-4dce-ba9f-2fdf15f7ba38
+    - id: 826616f8-6613-40c0-8992-6326c44d6c6c
       label: +
-      parentId: d5b63af6-fd51-47a6-b88e-212695cc6135
+      parentId: 6b35a967-a052-4659-adad-e18a9a69e8b3
       isInput: 0
       buttonRect:
         serializedVersion: 2
-        x: 189.38
+        x: 188.63
+        y: 33.03
+        width: 10
+        height: 23
+  - m_name: LargeFileClipSetting
+    m_id: a284f441-607f-4f0a-9a76-93a7f02b4541
+    m_x: 576
+    m_y: 396
+    m_nodeInstance:
+      m_className: UnityEngine.AssetGraph.ImportSetting, Unity.AssetGraph.Editor,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      m_instanceData: B64|eyJtX3Nwcml0ZVBhY2tpbmdUYWdOYW1lVGVtcGxhdGUiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IioifV19LCJtX292ZXJ3cml0ZVBhY2tpbmdUYWciOmZhbHNlLCJtX3VzZUN1c3RvbVNldHRpbmdBc3NldCI6ZmFsc2UsIm1fb3ZlcndyaXRlU3ByaXRlU2hlZXQiOmZhbHNlLCJtX2N1c3RvbVNldHRpbmdBc3NldEd1aWQiOiIiLCJtX3JlZmVyZW5jZUFzc2V0R3VpZCI6IjE5M2RmNTY2YTlhZGY5MzQ2YmQzZjRkZDQ3ODVjMTIxIiwibV9jb25maWd1cmF0b3JJbnN0YW5jZSI6eyJtX2NsYXNzTmFtZSI6IlVuaXR5RW5naW5lLkFzc2V0R3JhcGguQXVkaW9JbXBvcnRTZXR0aW5nc0NvbmZpZ3VyYXRvciwgVW5pdHkuQXNzZXRHcmFwaC5FZGl0b3IsIFZlcnNpb249MC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsIiwibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IkI2NHxlMzA9In1dfX0=
+    m_inputPoints:
+    - id: 17290c97-e65c-4e58-93d9-1e55d4166ba1
+      label: '-'
+      parentId: a284f441-607f-4f0a-9a76-93a7f02b4541
+      isInput: 1
+      buttonRect:
+        serializedVersion: 2
+        x: 0
+        y: 30.029999
+        width: 21
+        height: 29
+    m_outputPoints:
+    - id: 26c463ac-846c-498f-a7a5-fe20db4048ff
+      label: +
+      parentId: a284f441-607f-4f0a-9a76-93a7f02b4541
+      isInput: 0
+      buttonRect:
+        serializedVersion: 2
+        x: 157.09
+        y: 33.03
+        width: 10
+        height: 23
+  - m_name: AudioCommonSettingNode
+    m_id: 48c8a490-91cf-42d9-949d-f5ed49dc098e
+    m_x: 792
+    m_y: 192
+    m_nodeInstance:
+      m_className: AudioCommonSettingNode, Assembly-CSharp-Editor, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_instanceData: B64|eyJtX215VmFsdWUiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IiJ9XX19
+    m_inputPoints:
+    - id: 6d493d07-72cb-4888-8903-c29613857e0b
+      label: '-'
+      parentId: 48c8a490-91cf-42d9-949d-f5ed49dc098e
+      isInput: 1
+      buttonRect:
+        serializedVersion: 2
+        x: 0
+        y: 30.029999
+        width: 21
+        height: 29
+    m_outputPoints:
+    - id: f8424dbd-cbb7-4c1f-b4af-cf569cdfdfec
+      label: +
+      parentId: 48c8a490-91cf-42d9-949d-f5ed49dc098e
+      isInput: 0
+      buttonRect:
+        serializedVersion: 2
+        x: 197.66
+        y: 33.03
+        width: 10
+        height: 23
+  - m_name: AudioCommonSettingNode
+    m_id: 76ac5902-c1b9-45b5-b325-7c3deaded967
+    m_x: 792
+    m_y: 300
+    m_nodeInstance:
+      m_className: AudioCommonSettingNode, Assembly-CSharp-Editor, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_instanceData: B64|eyJtX215VmFsdWUiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IiJ9XX19
+    m_inputPoints:
+    - id: 3250895d-6fb0-4603-a317-d599307d6281
+      label: '-'
+      parentId: 76ac5902-c1b9-45b5-b325-7c3deaded967
+      isInput: 1
+      buttonRect:
+        serializedVersion: 2
+        x: 0
+        y: 30.029999
+        width: 21
+        height: 29
+    m_outputPoints:
+    - id: 4773bfc0-114d-43f6-a466-6cc8694b03c8
+      label: +
+      parentId: 76ac5902-c1b9-45b5-b325-7c3deaded967
+      isInput: 0
+      buttonRect:
+        serializedVersion: 2
+        x: 197.66
+        y: 33.03
+        width: 10
+        height: 23
+  - m_name: AudioCommonSettingNode
+    m_id: 60249877-7efb-4158-a532-e71a9f1e8574
+    m_x: 792
+    m_y: 396
+    m_nodeInstance:
+      m_className: AudioCommonSettingNode, Assembly-CSharp-Editor, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      m_instanceData: B64|eyJtX215VmFsdWUiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IiJ9XX19
+    m_inputPoints:
+    - id: 203598af-e4f8-4a21-a861-d7fa5dc02fd6
+      label: '-'
+      parentId: 60249877-7efb-4158-a532-e71a9f1e8574
+      isInput: 1
+      buttonRect:
+        serializedVersion: 2
+        x: 0
+        y: 30.029999
+        width: 21
+        height: 29
+    m_outputPoints:
+    - id: 761f75d9-d5cc-4a2a-a3c3-02fb9d2551ce
+      label: +
+      parentId: 60249877-7efb-4158-a532-e71a9f1e8574
+      isInput: 0
+      buttonRect:
+        serializedVersion: 2
+        x: 197.66
         y: 33.03
         width: 10
         height: 23
@@ -292,25 +362,43 @@ MonoBehaviour:
     m_toNodeId: 140c703d-2b5b-4879-b953-07d25438d185
     m_toNodeConnectionPoiontId: 5c5cc46c-af31-4459-88e7-6f65624a60ef
     m_label: +
-  - m_id: 9a7d5633-47ec-4e0e-aa65-98f9ac682e17
-    m_fromNodeId: 4440a677-ae54-4c6f-a265-b046a4939c7f
-    m_fromNodeConnectionPointId: dd63e09e-67a8-4915-a370-ef711d8c1c88
-    m_toNodeId: cf2765ac-19ad-4401-b974-616be7e5470e
-    m_toNodeConnectionPoiontId: 3f1c9e69-2f58-4e23-8eda-254019dd9e69
-    m_label: +
-  - m_id: c4bad88a-88c9-4a76-93bb-db3e7942110a
-    m_fromNodeId: cf2765ac-19ad-4401-b974-616be7e5470e
-    m_fromNodeConnectionPointId: 273380be-1be4-4b61-b6ae-e3674c09964d
-    m_toNodeId: b0507e12-7838-4c01-8df6-03d8164e09d6
-    m_toNodeConnectionPoiontId: f4dc78f3-b1f0-49ce-bb1e-c11015fc2e17
+  - m_id: 612d81c5-fea2-4636-9843-03cc20f17078
+    m_fromNodeId: 1f49d52a-50c0-442c-84b0-f1ea295e9467
+    m_fromNodeConnectionPointId: 9b8e4e53-9b46-478b-9669-5d9841cb79e4
+    m_toNodeId: 15a22f8f-a6aa-4d04-a233-21bdc6efe563
+    m_toNodeConnectionPoiontId: 1ddfb142-055e-4f91-91bb-09d5d316801e
     m_label: '[Audio]'
-  - m_id: 87d7bbde-901f-4b2c-8f37-84978bb37306
-    m_fromNodeId: b0507e12-7838-4c01-8df6-03d8164e09d6
-    m_fromNodeConnectionPointId: 4a7f34b4-da8a-4f26-89b2-5d17d35cc3ed
-    m_toNodeId: d5b63af6-fd51-47a6-b88e-212695cc6135
-    m_toNodeConnectionPoiontId: b2b29087-5e6f-4d12-8301-4180d8d82748
+  - m_id: dbfffbdf-d547-4b15-a549-9e4a33605961
+    m_fromNodeId: e54dfc0d-6471-4652-bd3e-e8c0977e00fa
+    m_fromNodeConnectionPointId: 06e74468-83e8-447f-bfea-8a00c063b29d
+    m_toNodeId: 6b35a967-a052-4659-adad-e18a9a69e8b3
+    m_toNodeConnectionPoiontId: dfe316f7-50e8-49cf-9bb1-da0558a51207
+    m_label: '[Audio]'
+  - m_id: 853f4b30-3f68-4885-976e-b9226ebb1b90
+    m_fromNodeId: 140c703d-2b5b-4879-b953-07d25438d185
+    m_fromNodeConnectionPointId: cdeb3706-0fca-4c9e-a6b6-04c7f6c4a4e4
+    m_toNodeId: a284f441-607f-4f0a-9a76-93a7f02b4541
+    m_toNodeConnectionPoiontId: 17290c97-e65c-4e58-93d9-1e55d4166ba1
+    m_label: '[Audio]'
+  - m_id: 26893dd9-b7f2-44e6-98b0-e23c96d8b382
+    m_fromNodeId: 15a22f8f-a6aa-4d04-a233-21bdc6efe563
+    m_fromNodeConnectionPointId: b3db3d85-f136-4f7c-abf8-f970e53c25fc
+    m_toNodeId: 48c8a490-91cf-42d9-949d-f5ed49dc098e
+    m_toNodeConnectionPoiontId: 6d493d07-72cb-4888-8903-c29613857e0b
     m_label: +
-  m_lastModified: 133868346380866612
+  - m_id: f711f77c-f75b-45db-9cc0-ebd8acb081ef
+    m_fromNodeId: a284f441-607f-4f0a-9a76-93a7f02b4541
+    m_fromNodeConnectionPointId: 26c463ac-846c-498f-a7a5-fe20db4048ff
+    m_toNodeId: 60249877-7efb-4158-a532-e71a9f1e8574
+    m_toNodeConnectionPoiontId: 203598af-e4f8-4a21-a861-d7fa5dc02fd6
+    m_label: +
+  - m_id: 1747b447-2583-412f-b816-d07640e153c9
+    m_fromNodeId: 6b35a967-a052-4659-adad-e18a9a69e8b3
+    m_fromNodeConnectionPointId: 826616f8-6613-40c0-8992-6326c44d6c6c
+    m_toNodeId: 76ac5902-c1b9-45b5-b325-7c3deaded967
+    m_toNodeConnectionPoiontId: 3250895d-6fb0-4603-a317-d599307d6281
+    m_label: +
+  m_lastModified: 133868396543060642
   m_version: 2
   m_graphDescription: 
   m_useAsAssetPostprocessor: 0

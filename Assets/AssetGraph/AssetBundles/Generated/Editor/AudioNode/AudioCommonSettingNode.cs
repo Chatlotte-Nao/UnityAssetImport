@@ -10,10 +10,10 @@ using System.Text.RegularExpressions;
 using UnityEngine.AssetGraph;
 using Model=UnityEngine.AssetGraph.DataModel.Version2;
 /// <summary>
-/// 音频文件设置节点
+/// 音频文件最后通用设置节点
 /// </summary>
-[CustomNode("Custom/AudioRuleNode", 1000)]
-public class AudioRuleNode : Node {
+[CustomNode("Custom/Audio/AudioCommonSettingNode", 1000)]
+public class AudioCommonSettingNode : Node {
 
 	[SerializeField] private SerializableMultiTargetString m_myValue;
 
@@ -44,7 +44,7 @@ public class AudioRuleNode : Node {
 	}
 
 	public override Node Clone(Model.NodeData newData) {
-		var newNode = new AudioRuleNode();
+		var newNode = new AudioCommonSettingNode();
 		newNode.m_myValue = new SerializableMultiTargetString(m_myValue);
 		newData.AddDefaultInputPoint();
 		newData.AddDefaultOutputPoint();
@@ -134,79 +134,51 @@ public class AudioRuleNode : Node {
 					{
 						string path = asset.importFrom;
 						AudioImporter audioImporter = AssetImporter.GetAtPath(path) as AudioImporter;
-						string[] labels = AssetDatabase.GetLabels(AssetDatabase.LoadMainAssetAtPath(path));
-						if (labels.Contains("AudioModified"))
-						{
-							Debug.Log($"跳过已修改的文件: {path}");
-							continue;
-						}
-						
-						if (audioImporter != null)
-						{
-							AudioClip audioClip = AssetDatabase.LoadAssetAtPath<AudioClip>(audioImporter.assetPath);
-							//如果是双声道且左右声道内容相同，则将其设置为单声道
-							if (IsStereoWithSameContent(audioClip))
-							{
-								audioImporter.forceToMono = true;
-							}
-							else
-							{
-								audioImporter.forceToMono = false;
-							}
-							
-							audioImporter.loadInBackground = true;
-							AudioImporterSampleSettings settings = audioImporter.defaultSampleSettings;
-							settings.preloadAudioData = true;
-							//根据音效类型选择压缩格式
-							if (IsShortEffect(audioClip))
-							{
-								//短音效使用PCM压缩格式
-								settings.compressionFormat=AudioCompressionFormat.PCM;
-							}
-							else if (IsLongEffectOrMusic(audioClip))
-							{
-								//长音效或背景音乐使用Vorbis压缩格式
-								settings.compressionFormat=AudioCompressionFormat.Vorbis;
-								settings.quality = 0.9f;
-							}
-							// 根据音频使用频率设置加载模式
-							if (IsHighFrequencySound(audioClip))
-							{
-								//高频音效（例如UI音效、按钮点击音效）使用Decompress On Load
-								settings.loadType=AudioClipLoadType.DecompressOnLoad;
-							}
-							else if (IsLowFrequencySound(audioClip))
-							{
-								//低频音效（例如环境音效）使用Compressed In Memory
-								settings.loadType=AudioClipLoadType.CompressedInMemory;
-							}
-							else
-							{
-								//大型音频（如背景音乐）使用Streaming
-								settings.loadType=AudioClipLoadType.Streaming;
-							}
-							//如果是移动平台，且音频采样率超过22050Hz，则重写为22050Hz
-							if (IsMobilePlatform() && audioClip.frequency > 22050)
-							{
-								settings.sampleRateSetting=AudioSampleRateSetting.OverrideSampleRate;
-								settings.sampleRateOverride = 22050;
-							}
-							audioImporter.defaultSampleSettings = settings;
-						}
-						// 添加标签
-						AssetDatabase.SetLabels(AssetDatabase.LoadMainAssetAtPath(path), labels.Append("AudioModified").ToArray());
+						AudioCommonSetting(audioImporter);
 						AssetDatabase.ImportAsset(asset.path, ImportAssetOptions.ForceUpdate);
 					}
 				}
 			}
 		}
 	}
+
+	/// <summary>
+	/// 每个类型音频文件最后都要设置一遍
+	/// </summary>
+	private void AudioCommonSetting(AudioImporter audioImporter)
+	{
+		if (audioImporter != null)
+		{
+			AudioClip audioClip = AssetDatabase.LoadAssetAtPath<AudioClip>(audioImporter.assetPath);
+			AudioImporterSampleSettings settings = audioImporter.defaultSampleSettings;
+			//如果是双声道且左右声道内容相同，则将其设置为单声道
+			if (IsStereoWithSameContent(audioClip))
+			{
+				audioImporter.forceToMono = true;
+			}
+			else
+			{
+				audioImporter.forceToMono = false;
+			}
+							
+			audioImporter.loadInBackground = true;
+			settings.preloadAudioData = true;
+							
+			//如果是移动平台，且音频采样率超过22050Hz，则重写为22050Hz
+			if (IsMobilePlatform() && audioClip.frequency > 22050)
+			{
+				settings.sampleRateSetting=AudioSampleRateSetting.OverrideSampleRate;
+				settings.sampleRateOverride = 22050;
+			}
+			audioImporter.defaultSampleSettings = settings;
+		}
+	}
+	
 	
 	/// <summary>
 	/// 检查是否为双声道且左右声道内容相同
 	/// </summary>
 	/// <param name="audioClip"></param>
-	/// <returns></returns>
 	private bool IsStereoWithSameContent(AudioClip audioClip)
 	{
 		if (audioClip.channels == 2)
@@ -230,47 +202,10 @@ public class AudioRuleNode : Node {
 		return false;
 	}
 	/// <summary>
-	/// 判断是否为短音效（例如：长度小于10秒的音效）
-	/// </summary>
-	/// <param name="audioClip"></param>
-	/// <returns></returns>
-	private bool IsShortEffect(AudioClip audioClip)
-	{
-		return audioClip.length < 10.0f; // 如果音频长度小于10秒，认为是短音效
-	}
-	/// <summary>
-	/// 判断是否为长音效或音乐（例如：长度大于等于10秒的音效或音乐）
-	/// </summary>
-	/// <param name="audioClip"></param>
-	/// <returns></returns>
-	private bool IsLongEffectOrMusic(AudioClip audioClip)
-	{
-		return audioClip.length >= 10.0f; // 如果音频长度大于等于10秒，认为是长音效或音乐
-	}
-	/// <summary>
-	/// 判断是否为高频音效（例如：UI音效、按钮点击音效等）
-	/// </summary>
-	/// <param name="audioClip"></param>
-	/// <returns></returns>
-	private bool IsHighFrequencySound(AudioClip audioClip)
-	{
-		return audioClip.length < 2.0f; // 如果音频很短（小于2秒），认为是高频音效
-	}
-	/// <summary>
-	/// 判断是否为低频音效（例如：环境音效、背景音乐等）
-	/// </summary>
-	/// <param name="audioClip"></param>
-	/// <returns></returns>
-	private bool IsLowFrequencySound(AudioClip audioClip)
-	{
-		return audioClip.length >= 10.0f; // 如果音频较长（大于等于10秒），认为是低频音效
-	}
-	/// <summary>
 	/// 判断是否为移动平台（iOS或Android）
 	/// </summary>
-	/// <returns></returns>
 	private bool IsMobilePlatform()
 	{
-		return (Application.platform == RuntimePlatform.IPhonePlayer || Application.platform == RuntimePlatform.Android);
+		return (EditorUserBuildSettings.activeBuildTarget == BuildTarget.iOS || EditorUserBuildSettings.activeBuildTarget == BuildTarget.Android);
 	}
 }

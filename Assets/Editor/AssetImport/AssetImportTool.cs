@@ -24,11 +24,11 @@ public class AssetImportTool
     private static void SetLoadPath(Enum enumType,string loadPath)
     {
         string graphPath = string.Empty;
-        if (enumType.GetType() == typeof(TextureType))
+        if (enumType.GetType() == typeof(AssetEnum.TextureType))
         {
             graphPath = ImportAssetConfig.TEXTURE_GRAPH_PATH;
         }
-        else if (enumType.GetType() == typeof(AudioType))
+        else if (enumType.GetType() == typeof(AssetEnum.AudioType))
         {
             graphPath = ImportAssetConfig.AUDIO_GRAPH_PATH;
         }
