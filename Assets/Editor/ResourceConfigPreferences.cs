@@ -1,27 +1,26 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Net;
+using System.Reflection;
 using UnityEditor;
+using UnityEditor.ShaderGraph.Internal;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using static ResourceConfigPreferences;
 
 public class ResourceConfigPreferences : SettingsProvider
 {
-    [System.Serializable]
-    public enum ResourceType
-    {
-        Texture,
-        Audio,
-        Model,
-        Script,
-        Other
-    }
+ 
+
     [System.Serializable]
     public class ResourceEntry
     {       
         public string ResourceName = "";//配置方案名称
         public string NamingPrefix = "";//前缀
         public int TypeIndex = 0;//类型
+        public int SubTypeIndex = 0;//类型
         public string ExternalDirectory = "";//美术资源路径
         public string AssetsDirectory = "";//项目资源路径
     }
@@ -32,17 +31,26 @@ public class ResourceConfigPreferences : SettingsProvider
         public List<ResourceEntry> Entries = new List<ResourceEntry>();
     }
 
+
+    private string ConfigJsonPath = "ResourceSettings/ResourceConfig.json";
+
     private List<ResourceEntry> resourceEntries = new List<ResourceEntry>();
 
-    private static readonly string[] typeOptions = Enum.GetNames(typeof(ResourceType));
+    private static string[] typeOptions;// = Enum.GetNames(typeof(ResourceType));
+    private static List<string[]> typeSubOptions = new List<string[]>();
+
 
     public ResourceConfigPreferences(string path, SettingsScope scope) : base(path, scope)
     {
         LoadSettings();
+      
     }
 
     public override void OnGUI(string searchContext)
     {
+
+       
+
         GUILayout.Label("美术资源配置", EditorStyles.boldLabel);
 
         if (GUILayout.Button("添加"))
@@ -72,8 +80,8 @@ public class ResourceConfigPreferences : SettingsProvider
 
             entry.ResourceName = EditorGUILayout.TextField("资源名称", entry.ResourceName);
             entry.NamingPrefix = EditorGUILayout.TextField("命名规则前缀", entry.NamingPrefix);
-            entry.TypeIndex = EditorGUILayout.Popup("类型", entry.TypeIndex, typeOptions);
-
+            entry.TypeIndex = EditorGUILayout.Popup("主类型", entry.TypeIndex, typeOptions);
+            entry.SubTypeIndex = EditorGUILayout.Popup("子类型", entry.SubTypeIndex, typeSubOptions[entry.TypeIndex]);
             // 外部目录
             EditorGUILayout.BeginHorizontal();
             EditorGUILayout.LabelField("外部目录", GUILayout.Width(80));
@@ -94,11 +102,6 @@ public class ResourceConfigPreferences : SettingsProvider
             EditorGUILayout.LabelField("Assets目录", GUILayout.Width(80));
             entry.AssetsDirectory = EditorGUILayout.TextField(entry.AssetsDirectory, GUILayout.Width(380));
             EditorGUILayout.EndHorizontal();
-
-            /*if (GUILayout.Button("设置规则"))
-            {
-                Debug.Log($"设置规则: {entry.ResourceName}");
-            }*/
 
             // 单独保存当前项
             if (GUILayout.Button("保存", GUILayout.Width(80)))
@@ -164,23 +167,22 @@ public class ResourceConfigPreferences : SettingsProvider
         }
         
         string directoryPath = "Assets/" + resourceEntries[index].AssetsDirectory;
-        if (!File.Exists(directoryPath))
-        {
-            // 文件不存在时，创建文件夹
-            CreateDirectory(directoryPath);
-        }
-
+        if (!File.Exists(directoryPath)) CreateDirectory(directoryPath);
+   
         var wrapper = new ResourceListWrapper { Entries = resourceEntries };
         string json = JsonUtility.ToJson(wrapper, true);
-        EditorPrefs.SetString("ResourceConfig", json);
+    
+        if (!Directory.Exists("ResourceSettings")) Directory.CreateDirectory("ResourceSettings");
+        File.WriteAllText(ConfigJsonPath, json);
+        //EditorPrefs.SetString("ResourceConfig", json);
         Debug.Log($"资源配置第 {index + 1} 项已保存: " + json);
     }
-
+    
     private void LoadSettings()
     {
-        if (EditorPrefs.HasKey("ResourceConfig"))
+        if (Directory.Exists("ResourceSettings"))   //EditorPrefs.HasKey("ResourceConfig"))
         {
-            string json = EditorPrefs.GetString("ResourceConfig");
+            string json = File.ReadAllText(ConfigJsonPath);
             var wrapper = JsonUtility.FromJson<ResourceListWrapper>(json);
 
             if (wrapper != null && wrapper.Entries != null)
@@ -188,8 +190,44 @@ public class ResourceConfigPreferences : SettingsProvider
                 resourceEntries = wrapper.Entries;
             }
         }
+
+
+        typeSubOptions.Clear();
+        var enumTypes = GetEnumTypes(typeof(AssetEnum));
+        typeOptions = new string[enumTypes.Length];
+
+        for (int indexRow = 0; indexRow < enumTypes.Length; indexRow++)
+        {
+            var enumType = enumTypes[indexRow];
+            typeOptions[indexRow] = enumType.Name;
+
+            Array subEnumType = Enum.GetValues(enumType);
+            string[] subEnum = new string[subEnumType.Length];
+
+            for (int i = 0; i < subEnumType.Length; i++) subEnum[i] = subEnumType.GetValue(i).ToString();
+
+            typeSubOptions.Add(subEnum);
+        }
+
     }
 
+
+
+    public static Enum GetValueByIndex(int type, int subType)
+    {
+        var enumTypes = GetEnumTypes(typeof(AssetEnum));
+        if (type < 0 || type >= enumTypes.Length)
+        {
+            return AssetEnum.TextureType.Default; 
+        }
+        Array subEnumType = Enum.GetValues(enumTypes[type]);
+        if (subType < 0 || subType >= subEnumType.Length)
+        {
+            return AssetEnum.TextureType.Default; 
+        }
+
+        return (Enum)subEnumType.GetValue(subType);
+    }
 
     private static void CreateDirectory(string directoryPath)
     {
@@ -200,12 +238,25 @@ public class ResourceConfigPreferences : SettingsProvider
         }
         AssetDatabase.Refresh();
     }
+
+
+    private static Type[] GetEnumTypes(Type type)
+    {
+        // 获取指定类型中的所有枚举类型
+        return type.GetNestedTypes(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static)
+                   .Where(t => t.IsEnum)
+                   .ToArray();
+    }
+
+
+
 }
 
 
 
 public class ResourceEntryOperationMode1
 {
+    public static Dictionary<string, ResourceEntry> OperationResourceEntrys = new Dictionary<string, ResourceEntry>();
     public static void Copy(ResourceEntry Entry, bool includeChildren = false) 
     {
         CopyFilesFromDirectory(Entry, includeChildren);
@@ -213,26 +264,17 @@ public class ResourceEntryOperationMode1
 
     private static void CopyFilesFromDirectory(ResourceEntry Entry, bool includeChildren = false)
     {
-
-        // 源目录（外部目录）
+        OperationResourceEntrys.Clear();
         string sourceDirectory = Entry.ExternalDirectory;  // 外部目录路径
-        // 目标目录（Assets 目录下）
         string targetDirectory = "Assets\\" + Entry.AssetsDirectory;   // 目标目录路径
-
-        // 检查源目录是否存在
         if (Directory.Exists(sourceDirectory))
         {
-            // 确保目标目录存在
-            if (!Directory.Exists(targetDirectory))
-            {
-                Directory.CreateDirectory(targetDirectory);  // 如果目标目录不存在则创建它
-            }
-
+            if (!Directory.Exists(targetDirectory)) Directory.CreateDirectory(targetDirectory);  // 如果目标目录不存在则创建它
             List<string> allfiles = new List<string>();
             string[] files = null;
             if (includeChildren)
             {
-                // 调用递归方法获取所有文件
+       
                 GetFilesRecursively(sourceDirectory, allfiles);
                 files = allfiles.ToArray();
             }
@@ -257,21 +299,21 @@ public class ResourceEntryOperationMode1
                         Debug.Log($"资源有变化{inAssetsNamePath}已更新");
                     }
 
-                    //FileCheck(file, Entry);
-                    // 构造目标文件路径
                     string targetFilePath = Path.Combine(targetDirectory, fileName);
 
                     // 复制文件到目标目录，true 表示覆盖已存在的文件
                     File.Copy(file, targetFilePath, true);
+                    OperationResourceEntrys.Add(file, Entry);
                 }
                 else if(!includeChildren) 
                 {
                     Debug.LogWarning($"资源{file}不包含前缀{Entry.NamingPrefix}");
                 }
-                // 获取文件名（不包含路径）
+
              
             }
-        }  
+        }
+        Excute();
     }
 
 
@@ -299,6 +341,29 @@ public class ResourceEntryOperationMode1
             Console.WriteLine($"Error: {ex.Message}");
         }
     }
+
+
+
+    private static void Excute()
+    {
+        string[] loadPaths = new string[OperationResourceEntrys.Count];
+        Enum[] enumTypes = new Enum[OperationResourceEntrys.Count];
+        int index = 0;
+        foreach (var e in OperationResourceEntrys) 
+        {
+            loadPaths[index] = e.Key;
+            enumTypes[index] = ResourceConfigPreferences.GetValueByIndex(e.Value.TypeIndex, e.Value.SubTypeIndex);
+            Debug.Log(loadPaths[index]);
+            Debug.Log(enumTypes[index]);
+            index++;
+        }
+
+        ImportAssetInfo info = new ImportAssetInfo(loadPaths, enumTypes);
+        AssetImportTool.ImportAssetsAndSetUp(info);
+    }
+
+
+ 
 
 }
 
