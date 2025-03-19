@@ -949,4 +949,12 @@ MonoBehaviour:
     m_importFrom: Assets/AssetGraph/AssetBundles/SavedSettings/ImportSettings/4f6a91bc-7bbe-441c-bee0-d0264f174098/setting.png
     m_exportTo: 
     m_variantName: 
+  - m_assetDatabaseId: 6ac427aa307b2d64183c7ea373e8162a
+    m_importFrom: Assets/Editor
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 028d88dff7170894581af5928d55471a
+    m_importFrom: Assets/AssetGraph/Graph
+    m_exportTo: 
+    m_variantName: 
   m_version: 2
