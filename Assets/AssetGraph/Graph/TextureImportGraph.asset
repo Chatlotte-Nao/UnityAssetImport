@@ -20,7 +20,7 @@ MonoBehaviour:
     m_nodeInstance:
       m_className: UnityEngine.AssetGraph.Loader, Unity.AssetGraph.Editor, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IkFzc2V0cy9UZXh0dXJlL05vcm1hbE1hcCJ9XX0sIm1fbG9hZFBhdGhHdWlkIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IjE5MDNjNzNlNjNlNzc3ODRjYWEzYTcxZGM2NmJiNzNhIn1dfSwibV9pZ25vcmVQYXR0ZXJucyI6W10sIm1fcmVzcG9uZFRvQXNzZXRDaGFuZ2UiOmZhbHNlfQ==
+      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IlRleHR1cmUvTm9ybWFsTWFwIn1dfSwibV9sb2FkUGF0aEd1aWQiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IiJ9LHsidGFyZ2V0R3JvdXAiOjEsInZhbHVlIjoiMTkwM2M3M2U2M2U3Nzc4NGNhYTNhNzFkYzY2YmI3M2EifV19LCJtX2lnbm9yZVBhdHRlcm5zIjpbXSwibV9yZXNwb25kVG9Bc3NldENoYW5nZSI6ZmFsc2V9
     m_inputPoints: []
     m_outputPoints:
     - id: be698274-6215-4276-8ac1-ee9315ca52a9
@@ -100,7 +100,7 @@ MonoBehaviour:
     m_nodeInstance:
       m_className: UnityEngine.AssetGraph.Loader, Unity.AssetGraph.Editor, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IkFzc2V0cy9UZXh0dXJlL0RlZmF1bHQifV19LCJtX2xvYWRQYXRoR3VpZCI6eyJtX3ZhbHVlcyI6W3sidGFyZ2V0R3JvdXAiOjAsInZhbHVlIjoiMDAwMDAwMDAwMDAwMDAwMDEwMDAwMDAwMDAwMDAwMDAifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6ImQ0OWViZjJkNjUwMDI2ZjQ3OTM2NWM5ZGMzNDRjNjE4In1dfSwibV9pZ25vcmVQYXR0ZXJucyI6W10sIm1fcmVzcG9uZFRvQXNzZXRDaGFuZ2UiOmZhbHNlfQ==
+      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IlRleHR1cmUvRGVmYXVsdCJ9XX0sIm1fbG9hZFBhdGhHdWlkIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIwMDAwMDAwMDAwMDAwMDAwMTAwMDAwMDAwMDAwMDAwMCJ9LHsidGFyZ2V0R3JvdXAiOjEsInZhbHVlIjoiZDQ5ZWJmMmQ2NTAwMjZmNDc5MzY1YzlkYzM0NGM2MTgifV19LCJtX2lnbm9yZVBhdHRlcm5zIjpbXSwibV9yZXNwb25kVG9Bc3NldENoYW5nZSI6ZmFsc2V9
     m_inputPoints: []
     m_outputPoints:
     - id: f88edbaf-8b52-4ede-a115-03d46a659b46
@@ -180,7 +180,7 @@ MonoBehaviour:
     m_nodeInstance:
       m_className: UnityEngine.AssetGraph.Loader, Unity.AssetGraph.Editor, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IkFzc2V0cy9UZXh0dXJlL1Nwcml0ZSJ9XX0sIm1fbG9hZFBhdGhHdWlkIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IjdjOGRlOTE5OTMyMDU5MDQ2OGRkYzY5YjNiMTYwMDRmIn1dfSwibV9pZ25vcmVQYXR0ZXJucyI6W10sIm1fcmVzcG9uZFRvQXNzZXRDaGFuZ2UiOmZhbHNlfQ==
+      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IlRleHR1cmUvU3ByaXRlIn1dfSwibV9sb2FkUGF0aEd1aWQiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IiJ9LHsidGFyZ2V0R3JvdXAiOjEsInZhbHVlIjoiN2M4ZGU5MTk5MzIwNTkwNDY4ZGRjNjliM2IxNjAwNGYifV19LCJtX2lnbm9yZVBhdHRlcm5zIjpbXSwibV9yZXNwb25kVG9Bc3NldENoYW5nZSI6ZmFsc2V9
     m_inputPoints: []
     m_outputPoints:
     - id: bf2c3b3b-ae4f-4b02-92dc-649d6eef0f22
@@ -260,7 +260,7 @@ MonoBehaviour:
     m_nodeInstance:
       m_className: UnityEngine.AssetGraph.Loader, Unity.AssetGraph.Editor, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IkFzc2V0cy9UZXh0dXJlL1NpbmdsZUNoYW5uZWwifV19LCJtX2xvYWRQYXRoR3VpZCI6eyJtX3ZhbHVlcyI6W3sidGFyZ2V0R3JvdXAiOjAsInZhbHVlIjoiIn0seyJ0YXJnZXRHcm91cCI6MSwidmFsdWUiOiIzZTJmZTBkZWMwNGU5NDI0OWI5NTY3OWMzNzJlM2U0MCJ9XX0sIm1faWdub3JlUGF0dGVybnMiOltdLCJtX3Jlc3BvbmRUb0Fzc2V0Q2hhbmdlIjpmYWxzZX0=
+      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IlRleHR1cmUvU2luZ2xlQ2hhbm5lbCJ9XX0sIm1fbG9hZFBhdGhHdWlkIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IjNlMmZlMGRlYzA0ZTk0MjQ5Yjk1Njc5YzM3MmUzZTQwIn1dfSwibV9pZ25vcmVQYXR0ZXJucyI6W10sIm1fcmVzcG9uZFRvQXNzZXRDaGFuZ2UiOmZhbHNlfQ==
     m_inputPoints: []
     m_outputPoints:
     - id: a9b5e73d-d58e-468d-9f4d-aa4d1f2b52e8
@@ -340,7 +340,7 @@ MonoBehaviour:
     m_nodeInstance:
       m_className: UnityEngine.AssetGraph.Loader, Unity.AssetGraph.Editor, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IkFzc2V0cy9UZXh0dXJlL1RyYW5zbHVjZW50In1dfSwibV9sb2FkUGF0aEd1aWQiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IiJ9LHsidGFyZ2V0R3JvdXAiOjEsInZhbHVlIjoiOTI0ZmVhNDBjNzhiYzAyNDk4MWEzMDcyMjU4ZDYxOWIifV19LCJtX2lnbm9yZVBhdHRlcm5zIjpbXSwibV9yZXNwb25kVG9Bc3NldENoYW5nZSI6ZmFsc2V9
+      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IlRleHR1cmUvVHJhbnNsdWNlbnQifV19LCJtX2xvYWRQYXRoR3VpZCI6eyJtX3ZhbHVlcyI6W3sidGFyZ2V0R3JvdXAiOjAsInZhbHVlIjoiIn0seyJ0YXJnZXRHcm91cCI6MSwidmFsdWUiOiI5MjRmZWE0MGM3OGJjMDI0OTgxYTMwNzIyNThkNjE5YiJ9XX0sIm1faWdub3JlUGF0dGVybnMiOltdLCJtX3Jlc3BvbmRUb0Fzc2V0Q2hhbmdlIjpmYWxzZX0=
     m_inputPoints: []
     m_outputPoints:
     - id: 35894392-4c5c-40eb-a558-484d03396d8a
@@ -450,77 +450,66 @@ MonoBehaviour:
     m_toNodeId: 0bc78aed-f99b-4e65-b602-11fd9e4c8481
     m_toNodeConnectionPoiontId: f444b71b-d536-44dd-982c-fa1bf895e4bd
     m_label: +
-    m_nodeName: 
   - m_id: b8072501-b7d7-4b76-9fbb-cf80c684d8f8
     m_fromNodeId: 0bc78aed-f99b-4e65-b602-11fd9e4c8481
     m_fromNodeConnectionPointId: 6e518275-bb1d-43c0-b109-c144becb1c76
     m_toNodeId: 328c0582-f832-4559-a1ba-d6e019014a14
     m_toNodeConnectionPoiontId: 94a4a295-5b9f-44e7-a451-41db3d82239c
     m_label: '[Texture]'
-    m_nodeName: 
   - m_id: d84695ad-b5b7-4901-bdc3-c4529b9b989f
     m_fromNodeId: ac8a52be-cf4f-457f-bf7e-18bf9c56872f
     m_fromNodeConnectionPointId: f88edbaf-8b52-4ede-a115-03d46a659b46
     m_toNodeId: 73b26d3b-65ad-4997-9ae8-2f8c614c7e22
     m_toNodeConnectionPoiontId: 2df8426a-283f-430f-af32-d03102531876
     m_label: +
-    m_nodeName: 
   - m_id: 9b0060a8-6550-4f47-80f0-3b9044247d3f
     m_fromNodeId: 73b26d3b-65ad-4997-9ae8-2f8c614c7e22
     m_fromNodeConnectionPointId: b7e5051c-7940-428c-95d1-8a4c00a51f00
     m_toNodeId: 4e58d866-7f99-45a2-86f7-1964b8d70635
     m_toNodeConnectionPoiontId: adf2a3a1-04fc-4050-acc0-a43a0d25d8b3
     m_label: '[Texture]'
-    m_nodeName: 
   - m_id: 49b22de7-e714-41e1-87b3-0ec1a4550d72
     m_fromNodeId: 5f8cb5ba-0739-4f74-aafe-1c048f4edc8b
     m_fromNodeConnectionPointId: bf2c3b3b-ae4f-4b02-92dc-649d6eef0f22
     m_toNodeId: 9d767a85-b725-4d49-8145-357dab60b0ce
     m_toNodeConnectionPoiontId: e9c984c7-d896-4d23-809c-46ee52edf68d
     m_label: +
-    m_nodeName: 
   - m_id: 50eb5115-21d7-4ac1-9ec1-e041e5563243
     m_fromNodeId: 9d767a85-b725-4d49-8145-357dab60b0ce
     m_fromNodeConnectionPointId: 091a1a75-7633-45c1-8574-d823e36ade02
     m_toNodeId: 15ca620f-3fa0-46c0-b948-3c32c9f7c8e3
     m_toNodeConnectionPoiontId: 515da031-0644-43a2-8a99-42cdfcd8e0e3
     m_label: '[Texture]'
-    m_nodeName: 
   - m_id: b7c9d2dc-b353-49eb-beb5-9f18b8e36916
     m_fromNodeId: a57da673-f732-4048-912b-b63d7363df41
     m_fromNodeConnectionPointId: a9b5e73d-d58e-468d-9f4d-aa4d1f2b52e8
     m_toNodeId: 0f755ed4-cec0-47bd-8e46-68948c4aafaf
     m_toNodeConnectionPoiontId: 565c8900-d022-43c6-a735-ed71601182df
     m_label: +
-    m_nodeName: 
   - m_id: 6793a7a0-3172-4bb8-81e0-e1b598e56f7a
     m_fromNodeId: 0f755ed4-cec0-47bd-8e46-68948c4aafaf
     m_fromNodeConnectionPointId: b79ed749-0a47-4aaf-98ce-8872460a658a
     m_toNodeId: 14abb276-27a0-4d5d-87af-1764351d80c6
     m_toNodeConnectionPoiontId: 87427f32-dc23-4584-af9d-88ae0e083c59
     m_label: '[Texture]'
-    m_nodeName: 
   - m_id: c2192328-6bec-460b-ba2a-5f7a240cbee0
     m_fromNodeId: 3325cf8e-bc00-4480-9d6a-37993a9ddb0c
     m_fromNodeConnectionPointId: 35894392-4c5c-40eb-a558-484d03396d8a
     m_toNodeId: 1a24575d-d2f8-4a98-9339-a8df65bd5242
     m_toNodeConnectionPoiontId: 55d9979a-d739-460a-90dd-2241940962ae
     m_label: +
-    m_nodeName: 
   - m_id: 6292c3dd-157c-4a5a-a4d8-365600ef1427
     m_fromNodeId: 1a24575d-d2f8-4a98-9339-a8df65bd5242
     m_fromNodeConnectionPointId: 7adbc730-b77f-419f-a29a-c4e307706616
     m_toNodeId: 6bc1ff97-5642-4127-b80c-07544e114b94
     m_toNodeConnectionPoiontId: a56b8877-a7f0-4fa5-8d4a-457e55fbc315
     m_label: '[Texture]'
-    m_nodeName: 
   - m_id: f60b388b-e876-4d3e-baea-aef56ecf4017
     m_fromNodeId: 6bc1ff97-5642-4127-b80c-07544e114b94
     m_fromNodeConnectionPointId: 28015b74-a934-4839-a8a1-a333bb247909
     m_toNodeId: 366b9404-e579-45b4-92c3-3f989e8e7787
     m_toNodeConnectionPoiontId: 47c08314-37e4-4466-a6f2-f792d49cd2ba
     m_label: +
-    m_nodeName: 
   m_lastModified: 133869907363588778
   m_version: 2
   m_graphDescription: 

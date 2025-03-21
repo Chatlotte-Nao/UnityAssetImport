@@ -20,7 +20,7 @@ MonoBehaviour:
     m_nodeInstance:
       m_className: UnityEngine.AssetGraph.Loader, Unity.AssetGraph.Editor, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IkFzc2V0cy9BdWRpby9IaWdoRnJlcXVlbmN5Q2xpcCJ9XX0sIm1fbG9hZFBhdGhHdWlkIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIwMDAwMDAwMDAwMDAwMDAwMTAwMDAwMDAwMDAwMDAwMCJ9LHsidGFyZ2V0R3JvdXAiOjEsInZhbHVlIjoiODNiYWIxZDg2NThhZDIwNDVhNmI2ZDE0NGYwMjc3OTEifV19LCJtX2lnbm9yZVBhdHRlcm5zIjpbXSwibV9yZXNwb25kVG9Bc3NldENoYW5nZSI6ZmFsc2V9
+      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IkF1ZGlvL0hpZ2hGcmVxdWVuY3lDbGlwIn1dfSwibV9sb2FkUGF0aEd1aWQiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IjAwMDAwMDAwMDAwMDAwMDAxMDAwMDAwMDAwMDAwMDAwIn0seyJ0YXJnZXRHcm91cCI6MSwidmFsdWUiOiI4M2JhYjFkODY1OGFkMjA0NWE2YjZkMTQ0ZjAyNzc5MSJ9XX0sIm1faWdub3JlUGF0dGVybnMiOltdLCJtX3Jlc3BvbmRUb0Fzc2V0Q2hhbmdlIjpmYWxzZX0=
     m_inputPoints: []
     m_outputPoints:
     - id: 1c58a3d0-f12e-4bcd-809e-278cb91c4976
@@ -40,7 +40,7 @@ MonoBehaviour:
     m_nodeInstance:
       m_className: UnityEngine.AssetGraph.Loader, Unity.AssetGraph.Editor, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IkFzc2V0cy9BdWRpby9MYXJnZUZpbGVDbGlwIn1dfSwibV9sb2FkUGF0aEd1aWQiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IjAwMDAwMDAwMDAwMDAwMDAxMDAwMDAwMDAwMDAwMDAwIn0seyJ0YXJnZXRHcm91cCI6MSwidmFsdWUiOiI1N2YxZDE0ZmNhMTk2MjE0OTg5ZjFkODk2ZGJjYmQxYiJ9XX0sIm1faWdub3JlUGF0dGVybnMiOltdLCJtX3Jlc3BvbmRUb0Fzc2V0Q2hhbmdlIjpmYWxzZX0=
+      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IkF1ZGlvL0xvd0ZyZXF1ZW5jeUNsaXAifV19LCJtX2xvYWRQYXRoR3VpZCI6eyJtX3ZhbHVlcyI6W3sidGFyZ2V0R3JvdXAiOjAsInZhbHVlIjoiMDAwMDAwMDAwMDAwMDAwMDEwMDAwMDAwMDAwMDAwMDAifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6ImY3YTViN2JiNjI2MjI2MDRmOWM5YWYxZGNjMzA2MzIyIn1dfSwibV9pZ25vcmVQYXR0ZXJucyI6W10sIm1fcmVzcG9uZFRvQXNzZXRDaGFuZ2UiOmZhbHNlfQ==
     m_inputPoints: []
     m_outputPoints:
     - id: f451db32-e976-4c08-862b-a9ab85d86ab8
@@ -60,7 +60,7 @@ MonoBehaviour:
     m_nodeInstance:
       m_className: UnityEngine.AssetGraph.Loader, Unity.AssetGraph.Editor, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IkFzc2V0cy9BdWRpby9Mb3dGcmVxdWVuY3lDbGlwIn1dfSwibV9sb2FkUGF0aEd1aWQiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IjAwMDAwMDAwMDAwMDAwMDAxMDAwMDAwMDAwMDAwMDAwIn0seyJ0YXJnZXRHcm91cCI6MSwidmFsdWUiOiJmN2E1YjdiYjYyNjIyNjA0ZjljOWFmMWRjYzMwNjMyMiJ9XX0sIm1faWdub3JlUGF0dGVybnMiOltdLCJtX3Jlc3BvbmRUb0Fzc2V0Q2hhbmdlIjpmYWxzZX0=
+      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiIifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IkF1ZGlvL0xhcmdlRmlsZUNsaXAifV19LCJtX2xvYWRQYXRoR3VpZCI6eyJtX3ZhbHVlcyI6W3sidGFyZ2V0R3JvdXAiOjAsInZhbHVlIjoiMDAwMDAwMDAwMDAwMDAwMDEwMDAwMDAwMDAwMDAwMDAifSx7InRhcmdldEdyb3VwIjoxLCJ2YWx1ZSI6IjU3ZjFkMTRmY2ExOTYyMTQ5ODlmMWQ4OTZkYmNiZDFiIn1dfSwibV9pZ25vcmVQYXR0ZXJucyI6W10sIm1fcmVzcG9uZFRvQXNzZXRDaGFuZ2UiOmZhbHNlfQ==
     m_inputPoints: []
     m_outputPoints:
     - id: 9a0ddaea-728d-458b-8e74-d8aa27068ac3
@@ -350,63 +350,54 @@ MonoBehaviour:
     m_toNodeId: 1f49d52a-50c0-442c-84b0-f1ea295e9467
     m_toNodeConnectionPoiontId: 2d9373ec-49ef-49cf-8341-8160bb724ae9
     m_label: +
-    m_nodeName: 
   - m_id: 2b10c4df-0ed6-43f2-988f-f19394742aff
     m_fromNodeId: 582e8261-0c62-4251-82f8-8ff803bcfa3d
     m_fromNodeConnectionPointId: f451db32-e976-4c08-862b-a9ab85d86ab8
     m_toNodeId: e54dfc0d-6471-4652-bd3e-e8c0977e00fa
     m_toNodeConnectionPoiontId: 613c2c05-ea44-4733-9d4f-0155ad49f744
     m_label: +
-    m_nodeName: 
   - m_id: 2b69980d-9acf-4da1-8a61-f570c41c6aa5
     m_fromNodeId: 368d2181-c3fe-46da-9712-b79faf95c656
     m_fromNodeConnectionPointId: 9a0ddaea-728d-458b-8e74-d8aa27068ac3
     m_toNodeId: 140c703d-2b5b-4879-b953-07d25438d185
     m_toNodeConnectionPoiontId: 5c5cc46c-af31-4459-88e7-6f65624a60ef
     m_label: +
-    m_nodeName: 
   - m_id: 612d81c5-fea2-4636-9843-03cc20f17078
     m_fromNodeId: 1f49d52a-50c0-442c-84b0-f1ea295e9467
     m_fromNodeConnectionPointId: 9b8e4e53-9b46-478b-9669-5d9841cb79e4
     m_toNodeId: 15a22f8f-a6aa-4d04-a233-21bdc6efe563
     m_toNodeConnectionPoiontId: 1ddfb142-055e-4f91-91bb-09d5d316801e
     m_label: '[Audio]'
-    m_nodeName: 
   - m_id: dbfffbdf-d547-4b15-a549-9e4a33605961
     m_fromNodeId: e54dfc0d-6471-4652-bd3e-e8c0977e00fa
     m_fromNodeConnectionPointId: 06e74468-83e8-447f-bfea-8a00c063b29d
     m_toNodeId: 6b35a967-a052-4659-adad-e18a9a69e8b3
     m_toNodeConnectionPoiontId: dfe316f7-50e8-49cf-9bb1-da0558a51207
     m_label: '[Audio]'
-    m_nodeName: 
   - m_id: 853f4b30-3f68-4885-976e-b9226ebb1b90
     m_fromNodeId: 140c703d-2b5b-4879-b953-07d25438d185
     m_fromNodeConnectionPointId: cdeb3706-0fca-4c9e-a6b6-04c7f6c4a4e4
     m_toNodeId: a284f441-607f-4f0a-9a76-93a7f02b4541
     m_toNodeConnectionPoiontId: 17290c97-e65c-4e58-93d9-1e55d4166ba1
     m_label: '[Audio]'
-    m_nodeName: 
   - m_id: 26893dd9-b7f2-44e6-98b0-e23c96d8b382
     m_fromNodeId: 15a22f8f-a6aa-4d04-a233-21bdc6efe563
     m_fromNodeConnectionPointId: b3db3d85-f136-4f7c-abf8-f970e53c25fc
     m_toNodeId: 48c8a490-91cf-42d9-949d-f5ed49dc098e
     m_toNodeConnectionPoiontId: 6d493d07-72cb-4888-8903-c29613857e0b
     m_label: +
-    m_nodeName: 
   - m_id: f711f77c-f75b-45db-9cc0-ebd8acb081ef
     m_fromNodeId: a284f441-607f-4f0a-9a76-93a7f02b4541
     m_fromNodeConnectionPointId: 26c463ac-846c-498f-a7a5-fe20db4048ff
     m_toNodeId: 60249877-7efb-4158-a532-e71a9f1e8574
     m_toNodeConnectionPoiontId: 203598af-e4f8-4a21-a861-d7fa5dc02fd6
     m_label: +
-    m_nodeName: 
   - m_id: 1747b447-2583-412f-b816-d07640e153c9
     m_fromNodeId: 6b35a967-a052-4659-adad-e18a9a69e8b3
     m_fromNodeConnectionPointId: 826616f8-6613-40c0-8992-6326c44d6c6c
     m_toNodeId: 76ac5902-c1b9-45b5-b325-7c3deaded967
     m_toNodeConnectionPoiontId: 3250895d-6fb0-4603-a317-d599307d6281
     m_label: +
-    m_nodeName: 
   m_lastModified: 133868396543060642
   m_version: 2
   m_graphDescription: 
