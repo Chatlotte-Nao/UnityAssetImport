@@ -74,5 +74,4 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 .idea/
-/[Aa]ssets/AssetGraph/AssetBundles/SavedSettings/ImportSettings
 /[Aa]ssets/AssetGraph/AssetBundles/Cache
