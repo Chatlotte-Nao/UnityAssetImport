@@ -151,6 +151,7 @@ public class AudioCommonSettingNode : Node {
 		{
 			AudioClip audioClip = AssetDatabase.LoadAssetAtPath<AudioClip>(audioImporter.assetPath);
 			AudioImporterSampleSettings settings = audioImporter.defaultSampleSettings;
+
 			//如果是双声道且左右声道内容相同，则将其设置为单声道
 			if (IsStereoWithSameContent(audioClip))
 			{
@@ -160,7 +161,20 @@ public class AudioCommonSettingNode : Node {
 			{
 				audioImporter.forceToMono = false;
 			}
-							
+			
+			if (audioClip.name.StartsWith(AssetEnum.AudioType.HighFrequencyClip.ToString()))
+			{
+				settings.loadType=AudioClipLoadType.DecompressOnLoad;
+			}
+			else if (audioClip.name.StartsWith(AssetEnum.AudioType.LowFrequencyClip.ToString()))
+			{
+				settings.loadType=AudioClipLoadType.CompressedInMemory;
+			}
+			else if (audioClip.name.StartsWith(AssetEnum.AudioType.LargeFileClip.ToString()))
+			{
+				settings.loadType=AudioClipLoadType.Streaming;
+			}
+			
 			audioImporter.loadInBackground = true;
 			settings.preloadAudioData = true;
 							

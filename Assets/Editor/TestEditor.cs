@@ -15,10 +15,10 @@ public class TestEditor : Editor
             "Assets/Texture/NormalMap",
             "Assets/Texture/SingleChannel",
             "Assets/Texture/Sprite",
-            "Assets/Texture/Translucent"
-            // "Assets/Audio/HighFrequencyClip",
-            // "Assets/Audio/LargeFileClip",
-            // "Assets/Audio/LowFrequencyClip"
+            "Assets/Texture/Translucent",
+            "Assets/Audio/HighFrequencyClip",
+            "Assets/Audio/LargeFileClip",
+            "Assets/Audio/LowFrequencyClip"
         };
 
         Enum[] testEnum =
@@ -27,10 +27,10 @@ public class TestEditor : Editor
             AssetEnum.TextureType.NormalMap,
             AssetEnum.TextureType.SingleChannel,
             AssetEnum.TextureType.Sprite,
-            AssetEnum.TextureType.Translucent
-            // AssetEnum.AudioType.HighFrequencyClip, 
-            // AssetEnum.AudioType.LowFrequencyClip, 
-            // AssetEnum.AudioType.LargeFileClip, 
+            AssetEnum.TextureType.Translucent,
+            AssetEnum.AudioType.HighFrequencyClip, 
+            AssetEnum.AudioType.LowFrequencyClip, 
+            AssetEnum.AudioType.LargeFileClip, 
         };
          
         ImportAssetInfo info = new ImportAssetInfo(testLoadPath,testEnum);
