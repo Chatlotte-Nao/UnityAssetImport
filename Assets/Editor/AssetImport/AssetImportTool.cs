@@ -36,8 +36,16 @@ public class AssetImportTool
 
         //执行所有已记录的 Graph
         var graphGuids = s_executeGraph.Select(AssetDatabase.AssetPathToGUID).ToList();
-        AssetGraphUtility.ExecuteAllGraphs(graphGuids);
-        AssetDatabase.Refresh();
+        var executeResult= AssetGraphUtility.ExecuteAllGraphs(graphGuids);
+        for (int i = 0; i < executeResult.Count; i++)
+        {
+            foreach (var item in executeResult[i].Issues)
+            {
+                string errorMsg= string.Format("{0}图表的{1}节点有错误，无法执行图表Execute命令，原因为{2}", executeResult[i].Graph.name,
+                    item.Node.Name, item.Reason);
+                Debug.LogError(errorMsg);
+            }
+        }
     }
 
     /// <summary>

@@ -39,35 +39,13 @@ public class ResourceConfigPreferences : SettingsProvider
 
     private static string[] typeOptions;// = Enum.GetNames(typeof(ResourceType));
     private static List<string[]> typeSubOptions = new List<string[]>();
-
-    private double timePassed = 0f;  
-    private bool waitingForDelay = false;
+    
     public ResourceConfigPreferences(string path, SettingsScope scope) : base(path, scope)
     {
         LoadSettings();
       
     }
-
-    private void Update()
-    {
-        if (waitingForDelay)
-        {
-
-            if (EditorApplication.timeSinceStartup - timePassed >= 2f) 
-            {
-                waitingForDelay = false; 
-
-                Excute();
-
-                AssetDatabase.Refresh();
-
-                Debug.Log("所有文件更新成功------------------>");
-            }
-        }
-    }
-
-
-
+    
 
     public override void OnGUI(string searchContext)
     {
@@ -83,25 +61,15 @@ public class ResourceConfigPreferences : SettingsProvider
 
         if (GUILayout.Button("执行"))
         {
-
-            if (!waitingForDelay)
+            foreach (var entry in resourceEntries)
             {
-
-                timePassed = EditorApplication.timeSinceStartup;
-
-                foreach (var entry in resourceEntries)
-                {
-                    //从美术目录拷贝到资源目录
-                    ResourceEntryOperationMode1.Copy(entry, true);
-                }
-
-                AssetDatabase.Refresh();
-                waitingForDelay = true;
-
+                //从美术目录拷贝到资源目录
+                ResourceEntryOperationMode1.Copy(entry, true);
             }
-           
-
-          
+            AssetDatabase.Refresh();
+            Excute();
+            AssetDatabase.Refresh();
+            Debug.Log("所有文件更新成功------------------>");
         }
 
         EditorGUILayout.Space();
@@ -167,15 +135,15 @@ public class ResourceConfigPreferences : SettingsProvider
     {
         string[] loadPaths = new string[this.resourceEntries.Count];
         Enum[] enumTypes = new Enum[this.resourceEntries.Count];
-        int index = 0;
-        foreach (var entry in this.resourceEntries)
-        {
-            loadPaths[index] = "Assets/" + entry.AssetsDirectory;
-            enumTypes[index] = ResourceConfigPreferences.GetValueByIndex(entry.TypeIndex, entry.SubTypeIndex);
-            Debug.Log(loadPaths[index]);
-            Debug.Log(enumTypes[index]);
-        }
 
+        for (int i = 0; i < resourceEntries.Count; i++)
+        {
+            loadPaths[i]="Assets/" + resourceEntries[i].AssetsDirectory;
+            enumTypes[i]=ResourceConfigPreferences.GetValueByIndex(resourceEntries[i].TypeIndex, resourceEntries[i].SubTypeIndex);
+            Debug.Log(loadPaths[i]);
+            Debug.Log(enumTypes[i]);
+        }
+        
         ImportAssetInfo info = new ImportAssetInfo(loadPaths, enumTypes);
         AssetImportTool.ImportAssetsAndSetUp(info);
     }
@@ -241,9 +209,7 @@ public class ResourceConfigPreferences : SettingsProvider
                 resourceEntries = wrapper.Entries;
             }
         }
-
-        EditorApplication.update += Update;
-
+        
         typeSubOptions.Clear();
         var enumTypes = GetEnumTypes(typeof(AssetEnum));
         typeOptions = new string[enumTypes.Length];
